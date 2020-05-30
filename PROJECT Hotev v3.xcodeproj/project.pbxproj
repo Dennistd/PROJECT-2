@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		16512B0F2471ADAA00BB1505 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16512B0E2471ADAA00BB1505 /* main.cpp */; };
+		16512B172471AE0B00BB1505 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16512B152471AE0B00BB1505 /* Room.cpp */; };
+		16512B1A2471AE1600BB1505 /* Tuple.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16512B182471AE1600BB1505 /* Tuple.cpp */; };
+		16512B1D2471AE2C00BB1505 /* Hotel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16512B1B2471AE2C00BB1505 /* Hotel.cpp */; };
+		16512B202471AF0300BB1505 /* Date.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16512B1E2471AF0300BB1505 /* Date.cpp */; };
+		16794A6D2472E67100A6A3F8 /* FileManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16794A6B2472E67100A6A3F8 /* FileManager.cpp */; };
+		16794A702472E68500A6A3F8 /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 16794A6E2472E68500A6A3F8 /* Test.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,18 @@
 /* Begin PBXFileReference section */
 		16512B0B2471ADAA00BB1505 /* PROJECT Hotev v3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "PROJECT Hotev v3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16512B0E2471ADAA00BB1505 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		16512B152471AE0B00BB1505 /* Room.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Room.cpp; sourceTree = "<group>"; };
+		16512B162471AE0B00BB1505 /* Room.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Room.hpp; sourceTree = "<group>"; };
+		16512B182471AE1600BB1505 /* Tuple.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tuple.cpp; sourceTree = "<group>"; };
+		16512B192471AE1600BB1505 /* Tuple.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Tuple.hpp; sourceTree = "<group>"; };
+		16512B1B2471AE2C00BB1505 /* Hotel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Hotel.cpp; sourceTree = "<group>"; };
+		16512B1C2471AE2C00BB1505 /* Hotel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Hotel.hpp; sourceTree = "<group>"; };
+		16512B1E2471AF0300BB1505 /* Date.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Date.cpp; sourceTree = "<group>"; };
+		16512B1F2471AF0300BB1505 /* Date.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Date.hpp; sourceTree = "<group>"; };
+		16794A6B2472E67100A6A3F8 /* FileManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FileManager.cpp; sourceTree = "<group>"; };
+		16794A6C2472E67100A6A3F8 /* FileManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FileManager.hpp; sourceTree = "<group>"; };
+		16794A6E2472E68500A6A3F8 /* Test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Test.cpp; sourceTree = "<group>"; };
+		16794A6F2472E68500A6A3F8 /* Test.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Test.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +75,18 @@
 		16512B0D2471ADAA00BB1505 /* PROJECT Hotev v3 */ = {
 			isa = PBXGroup;
 			children = (
+				16512B1E2471AF0300BB1505 /* Date.cpp */,
+				16512B1F2471AF0300BB1505 /* Date.hpp */,
+				16512B152471AE0B00BB1505 /* Room.cpp */,
+				16512B162471AE0B00BB1505 /* Room.hpp */,
+				16512B182471AE1600BB1505 /* Tuple.cpp */,
+				16512B192471AE1600BB1505 /* Tuple.hpp */,
+				16512B1B2471AE2C00BB1505 /* Hotel.cpp */,
+				16512B1C2471AE2C00BB1505 /* Hotel.hpp */,
+				16794A6B2472E67100A6A3F8 /* FileManager.cpp */,
+				16794A6C2472E67100A6A3F8 /* FileManager.hpp */,
+				16794A6E2472E68500A6A3F8 /* Test.cpp */,
+				16794A6F2472E68500A6A3F8 /* Test.hpp */,
 				16512B0E2471ADAA00BB1505 /* main.cpp */,
 			);
 			path = "PROJECT Hotev v3";
@@ -119,7 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16512B1A2471AE1600BB1505 /* Tuple.cpp in Sources */,
+				16512B172471AE0B00BB1505 /* Room.cpp in Sources */,
+				16794A702472E68500A6A3F8 /* Test.cpp in Sources */,
+				16512B1D2471AE2C00BB1505 /* Hotel.cpp in Sources */,
+				16794A6D2472E67100A6A3F8 /* FileManager.cpp in Sources */,
 				16512B0F2471ADAA00BB1505 /* main.cpp in Sources */,
+				16512B202471AF0300BB1505 /* Date.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

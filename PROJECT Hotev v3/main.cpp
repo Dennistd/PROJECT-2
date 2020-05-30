@@ -6,10 +6,53 @@
 //  Copyright © 2020 Dennis Dimitrov. All rights reserved.
 //
 
-#include <iostream>
+#include "Test.hpp"
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main() {
+    
+    ///Прост пример за работа на системата
+   
+    //char command[COMMAND_MAX_SIZE];
+    
+    
+    Hotel Trivago;
+    
+    //Построяване на хотела
+   Date start(2020,1,1);
+   Date end(2020,3,13);
+//    start.printDate();
+    
+    Room firstFloor(4,5,start,end,"thchchch");
+    Room secondFloor(1,2,start,end,"Expecting room servise");
+//    Tuple t(firstFloor);
+//    Trivago.addRoom(t);
+    
+    Tuple tu(firstFloor);
+    Tuple sec(secondFloor);
+    
+    Trivago.addRoom(tu);
+    Trivago.addRoom(sec);
+   // Trivago.addRoom(tu);
+   // Trivago.addRoom(secondFloor);
+    
+    Trivago.print();
+//
+    
+    //Date secondS(2020,1,1);
+    //Date secondE(2020,3,13);
+    
+    //Room firstFloor2(2,4,secondS,secondE,"Expecting room service");;
+    //Trivago.addRoom(firstFloor2);
+    
+    
+    
+    //FileManager f("Output.txt",Trivago);
+    //f.write();
+    
+//    Test HotelTest(Trivago,command);
+//    HotelTest.FileCommand();
+    
+    
+    
 }
