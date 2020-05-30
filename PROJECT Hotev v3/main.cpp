@@ -23,13 +23,12 @@ int main() {
    Date end(2020,3,13);
 //    start.printDate();
     
-    Room firstFloor(4,5,start,end,"thchchch");
+    Room firstFloor(4,5,start,end,"Needs cleaning");
     Room secondFloor(1,2,start,end,"Expecting room servise");
-//    Tuple t(firstFloor);
-//    Trivago.addRoom(t);
+
     
     Tuple tu(firstFloor);
-    Tuple sec(secondFloor);
+    //Tuple sec(secondFloor);
     
     Trivago.addRoom(tu);
     Trivago.addRoom(sec);
@@ -39,12 +38,7 @@ int main() {
     Trivago.print();
 //
     
-    //Date secondS(2020,1,1);
-    //Date secondE(2020,3,13);
-    
-    //Room firstFloor2(2,4,secondS,secondE,"Expecting room service");;
-    //Trivago.addRoom(firstFloor2);
-    
+
     
     
     //FileManager f("Output.txt",Trivago);
