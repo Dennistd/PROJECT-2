@@ -173,7 +173,7 @@ void Hotel:: findVIP(int beds,const Date& from,const Date& to){
         int index=GetIndex(room);
         at(index).makeUnavailable(from, to, note);
         
-    
+    }
 
 std::ostream& operator<<(std::ostream& stream, const Hotel& h){
     int size=h.GetSize();

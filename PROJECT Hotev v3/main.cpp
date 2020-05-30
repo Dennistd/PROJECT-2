@@ -18,7 +18,7 @@ int main() {
     
     Hotel Trivago;
     
-    //Построяване на хотела
+    //Filling the hotel
    Date start(2020,1,1);
    Date end(2020,3,13);
 //    start.printDate();
@@ -31,12 +31,11 @@ int main() {
     //Tuple sec(secondFloor);
     
     Trivago.addRoom(tu);
-    Trivago.addRoom(sec);
-   // Trivago.addRoom(tu);
-   // Trivago.addRoom(secondFloor);
+    Trivago.addRoom(secondFloor);
+
     
-    Trivago.print();
-//
+   // Trivago.print();
+
     
 
     

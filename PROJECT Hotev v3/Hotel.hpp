@@ -37,7 +37,7 @@ public:
     size_t GetSize()const;
     
     ///Добавя стая към хотела
-   // void addRoom(const Room& rooom);
+    void addRoom(const Room& rooom);
     void addRoom(const Tuple& tuple);
     
     void checkin(const Room& room,const Date& from,const Date& to,const char* note);
