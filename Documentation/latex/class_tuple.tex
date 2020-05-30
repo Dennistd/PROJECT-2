@@ -1,0 +1,99 @@
+\hypertarget{class_tuple}{}\doxysection{Tuple Class Reference}
+\label{class_tuple}\index{Tuple@{Tuple}}
+
+
+Class tuple.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tuple_a07c616afb195cf694e8814318fbd2aa8}{Tuple}} ()
+\item 
+\mbox{\hyperlink{class_tuple_aaeecc03056f99a5b65241df64605c2f2}{Tuple}} (const \mbox{\hyperlink{class_room}{Room}} \&room)
+\item 
+\mbox{\hyperlink{class_room}{Room}} \mbox{\hyperlink{class_tuple_acc46b625310590069177d23fb34b47f2}{Get\+Room}} () const
+\item 
+int \mbox{\hyperlink{class_tuple_a2c129a243d713f2924de8fb5bdf6d5a6}{Get\+Free\+Beds}} () const
+\item 
+void \mbox{\hyperlink{class_tuple_a98e3c8898e09ca73c0b52c4bc6e9945e}{checkin}} (const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to, const char $\ast$note)
+\item 
+void \mbox{\hyperlink{class_tuple_aad56ab54c5ec7125104a5d8403d645f5}{checkin}} (const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to, const char $\ast$note, int guests)
+\item 
+void \mbox{\hyperlink{class_tuple_a2afe75f68aa7ea1f67d711d844368a97}{make\+Empty}} ()
+\item 
+void \mbox{\hyperlink{class_tuple_aa94bedff838cb92d5bee7ec75b4b716e}{make\+Unavailable}} (const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to, const char $\ast$note)
+\item 
+void \mbox{\hyperlink{class_tuple_a7069b579549f7bfc1c2271a93d080662}{print}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class tuple. 
+
+pair of a room and its free beds $<$\mbox{\hyperlink{class_room}{Room}} ; count of beds$>$ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tuple_a07c616afb195cf694e8814318fbd2aa8}\label{class_tuple_a07c616afb195cf694e8814318fbd2aa8}} 
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{Tuple()}{Tuple()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Tuple\+::\+Tuple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tuple_aaeecc03056f99a5b65241df64605c2f2}\label{class_tuple_aaeecc03056f99a5b65241df64605c2f2}} 
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\index{Tuple@{Tuple}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{Tuple()}{Tuple()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Tuple\+::\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_room}{Room}} \&}]{room }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tuple_a98e3c8898e09ca73c0b52c4bc6e9945e}\label{class_tuple_a98e3c8898e09ca73c0b52c4bc6e9945e}} 
+\index{Tuple@{Tuple}!checkin@{checkin}}
+\index{checkin@{checkin}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{checkin()}{checkin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Tuple\+::checkin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to,  }\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tuple_aad56ab54c5ec7125104a5d8403d645f5}\label{class_tuple_aad56ab54c5ec7125104a5d8403d645f5}} 
+\index{Tuple@{Tuple}!checkin@{checkin}}
+\index{checkin@{checkin}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{checkin()}{checkin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Tuple\+::checkin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to,  }\item[{const char $\ast$}]{note,  }\item[{int}]{guests }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tuple_a2c129a243d713f2924de8fb5bdf6d5a6}\label{class_tuple_a2c129a243d713f2924de8fb5bdf6d5a6}} 
+\index{Tuple@{Tuple}!GetFreeBeds@{GetFreeBeds}}
+\index{GetFreeBeds@{GetFreeBeds}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{GetFreeBeds()}{GetFreeBeds()}}
+{\footnotesize\ttfamily int Tuple\+::\+Get\+Free\+Beds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_tuple_acc46b625310590069177d23fb34b47f2}\label{class_tuple_acc46b625310590069177d23fb34b47f2}} 
+\index{Tuple@{Tuple}!GetRoom@{GetRoom}}
+\index{GetRoom@{GetRoom}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{GetRoom()}{GetRoom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room}{Room}} Tuple\+::\+Get\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_tuple_a2afe75f68aa7ea1f67d711d844368a97}\label{class_tuple_a2afe75f68aa7ea1f67d711d844368a97}} 
+\index{Tuple@{Tuple}!makeEmpty@{makeEmpty}}
+\index{makeEmpty@{makeEmpty}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{makeEmpty()}{makeEmpty()}}
+{\footnotesize\ttfamily void Tuple\+::make\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tuple_aa94bedff838cb92d5bee7ec75b4b716e}\label{class_tuple_aa94bedff838cb92d5bee7ec75b4b716e}} 
+\index{Tuple@{Tuple}!makeUnavailable@{makeUnavailable}}
+\index{makeUnavailable@{makeUnavailable}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{makeUnavailable()}{makeUnavailable()}}
+{\footnotesize\ttfamily void Tuple\+::make\+Unavailable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to,  }\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_tuple_a7069b579549f7bfc1c2271a93d080662}\label{class_tuple_a7069b579549f7bfc1c2271a93d080662}} 
+\index{Tuple@{Tuple}!print@{print}}
+\index{print@{print}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Tuple\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_tuple_8hpp}{Tuple.\+hpp}}\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_tuple_8cpp}{Tuple.\+cpp}}\end{DoxyCompactItemize}

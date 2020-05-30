@@ -1,0 +1,317 @@
+\hypertarget{class_room}{}\doxysection{Room Class Reference}
+\label{class_room}\index{Room@{Room}}
+
+
+Class for the room unit.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_room_ac6ef93a7d9c3e1d624e025058d5f16ff}{Room}} ()
+\item 
+\mbox{\hyperlink{class_room_a08c6da2a2e4da8dcb084d68348b7d810}{Room}} (int number, int beds)
+\item 
+\mbox{\hyperlink{class_room_a761fd232d32a23790de84bb3bfe6f75b}{Room}} (int number, int beds, int guests, const \mbox{\hyperlink{class_date}{Date}} \&start, const \mbox{\hyperlink{class_date}{Date}} \&end, const char $\ast$note)
+\item 
+\mbox{\hyperlink{class_room_a195d52159b70617462cce07a13174d9a}{Room}} (int number, int beds, const \mbox{\hyperlink{class_date}{Date}} \&start, const \mbox{\hyperlink{class_date}{Date}} \&end, const char $\ast$note)
+\item 
+\mbox{\hyperlink{class_room_a43187ba19aa202a0fdf0efc385ad45f2}{Room}} (const \mbox{\hyperlink{class_room}{Room}} \&other)
+\item 
+\mbox{\hyperlink{class_room}{Room}} \& \mbox{\hyperlink{class_room_adfa7acf07fe4e58b1a37f50a60f7a969}{operator=}} (const \mbox{\hyperlink{class_room}{Room}} \&other)
+\item 
+\mbox{\hyperlink{class_room_a67d5da09983cc53097807fd43ba5481a}{$\sim$\+Room}} ()
+\item 
+void \mbox{\hyperlink{class_room_ac48eaef1aab9efa78afdf39c4636f5a7}{Set\+Number}} (int number)
+\item 
+void \mbox{\hyperlink{class_room_ae4f2d2790be513dec08be6cbd7a9a0fd}{Set\+Beds}} (int beds)
+\item 
+void \mbox{\hyperlink{class_room_a284635d6d500926dcd8fd5af2268aaa0}{Set\+Start}} (const \mbox{\hyperlink{class_date}{Date}} \&start)
+\item 
+void \mbox{\hyperlink{class_room_a56dcbd8afed8e605601785a9c3557f90}{Set\+Finish}} (const \mbox{\hyperlink{class_date}{Date}} \&finish)
+\item 
+void \mbox{\hyperlink{class_room_a07209f3460b6ebcbaf9193d84724db0d}{Set\+Note}} (const char $\ast$note)
+\item 
+void \mbox{\hyperlink{class_room_a228046c35c750460c16df502db2578b7}{Set\+Guests}} (int guests)
+\item 
+int \mbox{\hyperlink{class_room_a47d1733d4d1b29501a7ac9549414b85f}{Get\+Number}} () const
+\item 
+int \mbox{\hyperlink{class_room_a6704bd0f7ac166ded8e14f2f7bca6aa8}{Get\+Beds}} () const
+\item 
+int \mbox{\hyperlink{class_room_ab9ee33605ab2c872af168d0b85d3b934}{Get\+Guests}} () const
+\item 
+bool \mbox{\hyperlink{class_room_a57d96ae3c2c4a09b5cb4d4f4ed6fc2ff}{Get\+Is\+Taken}} () const
+\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_room_acd6d48a67e75748fc0c4485c119a92fd}{Get\+Start}} () const
+\item 
+\mbox{\hyperlink{class_date}{Date}} \mbox{\hyperlink{class_room_a4296e1fbc1437505a93cde8789c77fb7}{Get\+Finish}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{class_room_aa725309478ea84059974e535eb93128c}{Get\+Note}} () const
+\item 
+void \mbox{\hyperlink{class_room_a095e83c11383f54d79a72fceae8f2f09}{checkin}} (const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to, const char $\ast$note)
+\begin{DoxyCompactList}\small\item\em Function for making a reservation. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_room_afd36a1c8f3925553a5516dd290187d69}{checkin}} (const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to, const char $\ast$note, int guests)
+\item 
+void \mbox{\hyperlink{class_room_a7cad828f3aea0e5b5673cb9cf5c99235}{make\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Function for checking out of the room. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_a79b04be5cfd3c0d4017317c05f93dde9}{can\+Be\+Changed}} (int beds) const
+\begin{DoxyCompactList}\small\item\em checks if the guests in the room can be moced to another \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_room_a06904c2695c5b04a524f9890ae24944e}{can\+Be\+Changed}} (int beds, const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to) const
+\item 
+bool \mbox{\hyperlink{class_room_abf59d1d3314d18f1767fdd168f17ee99}{Is\+Taken\+On}} (const \mbox{\hyperlink{class_date}{Date}} \&date) const
+\item 
+bool \mbox{\hyperlink{class_room_a86082972098bedd270e77219aec1e6b5}{is\+Available}} (const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to) const
+\item 
+int \mbox{\hyperlink{class_room_a89c7ebabf42253c89b6094d209c6b836}{count\+Days}} (const \mbox{\hyperlink{class_date}{Date}} \&date)
+\item 
+bool \mbox{\hyperlink{class_room_a4b534bef7d6eeb6717f9352287e454c8}{Is\+Used}} (const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to) const
+\item 
+void \mbox{\hyperlink{class_room_aec2b1b39fe5a0cd7ef4961b5cf5b84ba}{print}} () const
+\item 
+void \mbox{\hyperlink{class_room_a9f5567b6eb4675ebbdf2cf3d0d71c91f}{make\+Unavailable}} (const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to, const char $\ast$note)
+\begin{DoxyCompactList}\small\item\em the room is set to be unavailable for a given period and the reason why \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_room_a6759927fff97d3f9ea8ad92c0abf8d4d}{operator$<$$<$}} (std\+::ostream \&stream, const \mbox{\hyperlink{class_room}{Room}} \&r)
+\begin{DoxyCompactList}\small\item\em Operators for working with files. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{class_room_a19e1db5a4e7a72d7e70df964b924793b}{operator$>$$>$}} (std\+::istream \&stream, \mbox{\hyperlink{class_room}{Room}} \&r)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for the room unit. 
+
+It is described by its number of beds and if it is taken or not 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_room_ac6ef93a7d9c3e1d624e025058d5f16ff}\label{class_room_ac6ef93a7d9c3e1d624e025058d5f16ff}} 
+\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Room\+::\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a08c6da2a2e4da8dcb084d68348b7d810}\label{class_room_a08c6da2a2e4da8dcb084d68348b7d810}} 
+\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Room\+::\+Room (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{int}]{beds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a761fd232d32a23790de84bb3bfe6f75b}\label{class_room_a761fd232d32a23790de84bb3bfe6f75b}} 
+\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Room\+::\+Room (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{int}]{beds,  }\item[{int}]{guests,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{start,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{end,  }\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a195d52159b70617462cce07a13174d9a}\label{class_room_a195d52159b70617462cce07a13174d9a}} 
+\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Room\+::\+Room (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{int}]{beds,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{start,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{end,  }\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a43187ba19aa202a0fdf0efc385ad45f2}\label{class_room_a43187ba19aa202a0fdf0efc385ad45f2}} 
+\index{Room@{Room}!Room@{Room}}
+\index{Room@{Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{Room()}{Room()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Room\+::\+Room (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_room}{Room}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a67d5da09983cc53097807fd43ba5481a}\label{class_room_a67d5da09983cc53097807fd43ba5481a}} 
+\index{Room@{Room}!````~Room@{$\sim$Room}}
+\index{````~Room@{$\sim$Room}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{$\sim$Room()}{~Room()}}
+{\footnotesize\ttfamily Room\+::$\sim$\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_room_a79b04be5cfd3c0d4017317c05f93dde9}\label{class_room_a79b04be5cfd3c0d4017317c05f93dde9}} 
+\index{Room@{Room}!canBeChanged@{canBeChanged}}
+\index{canBeChanged@{canBeChanged}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{canBeChanged()}{canBeChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Room\+::can\+Be\+Changed (\begin{DoxyParamCaption}\item[{int}]{beds }\end{DoxyParamCaption}) const}
+
+
+
+checks if the guests in the room can be moced to another 
+
+\mbox{\Hypertarget{class_room_a06904c2695c5b04a524f9890ae24944e}\label{class_room_a06904c2695c5b04a524f9890ae24944e}} 
+\index{Room@{Room}!canBeChanged@{canBeChanged}}
+\index{canBeChanged@{canBeChanged}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{canBeChanged()}{canBeChanged()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Room\+::can\+Be\+Changed (\begin{DoxyParamCaption}\item[{int}]{beds,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_a095e83c11383f54d79a72fceae8f2f09}\label{class_room_a095e83c11383f54d79a72fceae8f2f09}} 
+\index{Room@{Room}!checkin@{checkin}}
+\index{checkin@{checkin}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{checkin()}{checkin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Room\+::checkin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to,  }\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+
+
+Function for making a reservation. 
+
+\mbox{\Hypertarget{class_room_afd36a1c8f3925553a5516dd290187d69}\label{class_room_afd36a1c8f3925553a5516dd290187d69}} 
+\index{Room@{Room}!checkin@{checkin}}
+\index{checkin@{checkin}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{checkin()}{checkin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Room\+::checkin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to,  }\item[{const char $\ast$}]{note,  }\item[{int}]{guests }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a89c7ebabf42253c89b6094d209c6b836}\label{class_room_a89c7ebabf42253c89b6094d209c6b836}} 
+\index{Room@{Room}!countDays@{countDays}}
+\index{countDays@{countDays}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{countDays()}{countDays()}}
+{\footnotesize\ttfamily int Room\+::count\+Days (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a6704bd0f7ac166ded8e14f2f7bca6aa8}\label{class_room_a6704bd0f7ac166ded8e14f2f7bca6aa8}} 
+\index{Room@{Room}!GetBeds@{GetBeds}}
+\index{GetBeds@{GetBeds}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{GetBeds()}{GetBeds()}}
+{\footnotesize\ttfamily int Room\+::\+Get\+Beds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_a4296e1fbc1437505a93cde8789c77fb7}\label{class_room_a4296e1fbc1437505a93cde8789c77fb7}} 
+\index{Room@{Room}!GetFinish@{GetFinish}}
+\index{GetFinish@{GetFinish}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{GetFinish()}{GetFinish()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Room\+::\+Get\+Finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_ab9ee33605ab2c872af168d0b85d3b934}\label{class_room_ab9ee33605ab2c872af168d0b85d3b934}} 
+\index{Room@{Room}!GetGuests@{GetGuests}}
+\index{GetGuests@{GetGuests}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{GetGuests()}{GetGuests()}}
+{\footnotesize\ttfamily int Room\+::\+Get\+Guests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_a57d96ae3c2c4a09b5cb4d4f4ed6fc2ff}\label{class_room_a57d96ae3c2c4a09b5cb4d4f4ed6fc2ff}} 
+\index{Room@{Room}!GetIsTaken@{GetIsTaken}}
+\index{GetIsTaken@{GetIsTaken}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{GetIsTaken()}{GetIsTaken()}}
+{\footnotesize\ttfamily bool Room\+::\+Get\+Is\+Taken (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_aa725309478ea84059974e535eb93128c}\label{class_room_aa725309478ea84059974e535eb93128c}} 
+\index{Room@{Room}!GetNote@{GetNote}}
+\index{GetNote@{GetNote}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{GetNote()}{GetNote()}}
+{\footnotesize\ttfamily const char $\ast$ Room\+::\+Get\+Note (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_a47d1733d4d1b29501a7ac9549414b85f}\label{class_room_a47d1733d4d1b29501a7ac9549414b85f}} 
+\index{Room@{Room}!GetNumber@{GetNumber}}
+\index{GetNumber@{GetNumber}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{GetNumber()}{GetNumber()}}
+{\footnotesize\ttfamily int Room\+::\+Get\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_acd6d48a67e75748fc0c4485c119a92fd}\label{class_room_acd6d48a67e75748fc0c4485c119a92fd}} 
+\index{Room@{Room}!GetStart@{GetStart}}
+\index{GetStart@{GetStart}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{GetStart()}{GetStart()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_date}{Date}} Room\+::\+Get\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_a86082972098bedd270e77219aec1e6b5}\label{class_room_a86082972098bedd270e77219aec1e6b5}} 
+\index{Room@{Room}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}}
+{\footnotesize\ttfamily bool Room\+::is\+Available (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_abf59d1d3314d18f1767fdd168f17ee99}\label{class_room_abf59d1d3314d18f1767fdd168f17ee99}} 
+\index{Room@{Room}!IsTakenOn@{IsTakenOn}}
+\index{IsTakenOn@{IsTakenOn}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{IsTakenOn()}{IsTakenOn()}}
+{\footnotesize\ttfamily bool Room\+::\+Is\+Taken\+On (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_a4b534bef7d6eeb6717f9352287e454c8}\label{class_room_a4b534bef7d6eeb6717f9352287e454c8}} 
+\index{Room@{Room}!IsUsed@{IsUsed}}
+\index{IsUsed@{IsUsed}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{IsUsed()}{IsUsed()}}
+{\footnotesize\ttfamily bool Room\+::\+Is\+Used (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_a7cad828f3aea0e5b5673cb9cf5c99235}\label{class_room_a7cad828f3aea0e5b5673cb9cf5c99235}} 
+\index{Room@{Room}!makeEmpty@{makeEmpty}}
+\index{makeEmpty@{makeEmpty}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{makeEmpty()}{makeEmpty()}}
+{\footnotesize\ttfamily void Room\+::make\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function for checking out of the room. 
+
+\mbox{\Hypertarget{class_room_a9f5567b6eb4675ebbdf2cf3d0d71c91f}\label{class_room_a9f5567b6eb4675ebbdf2cf3d0d71c91f}} 
+\index{Room@{Room}!makeUnavailable@{makeUnavailable}}
+\index{makeUnavailable@{makeUnavailable}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{makeUnavailable()}{makeUnavailable()}}
+{\footnotesize\ttfamily void Room\+::make\+Unavailable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to,  }\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+
+
+the room is set to be unavailable for a given period and the reason why 
+
+\mbox{\Hypertarget{class_room_adfa7acf07fe4e58b1a37f50a60f7a969}\label{class_room_adfa7acf07fe4e58b1a37f50a60f7a969}} 
+\index{Room@{Room}!operator=@{operator=}}
+\index{operator=@{operator=}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room}{Room}} \& Room\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_room}{Room}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_aec2b1b39fe5a0cd7ef4961b5cf5b84ba}\label{class_room_aec2b1b39fe5a0cd7ef4961b5cf5b84ba}} 
+\index{Room@{Room}!print@{print}}
+\index{print@{print}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Room\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_room_ae4f2d2790be513dec08be6cbd7a9a0fd}\label{class_room_ae4f2d2790be513dec08be6cbd7a9a0fd}} 
+\index{Room@{Room}!SetBeds@{SetBeds}}
+\index{SetBeds@{SetBeds}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{SetBeds()}{SetBeds()}}
+{\footnotesize\ttfamily void Room\+::\+Set\+Beds (\begin{DoxyParamCaption}\item[{int}]{beds }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a56dcbd8afed8e605601785a9c3557f90}\label{class_room_a56dcbd8afed8e605601785a9c3557f90}} 
+\index{Room@{Room}!SetFinish@{SetFinish}}
+\index{SetFinish@{SetFinish}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{SetFinish()}{SetFinish()}}
+{\footnotesize\ttfamily void Room\+::\+Set\+Finish (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{finish }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a228046c35c750460c16df502db2578b7}\label{class_room_a228046c35c750460c16df502db2578b7}} 
+\index{Room@{Room}!SetGuests@{SetGuests}}
+\index{SetGuests@{SetGuests}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{SetGuests()}{SetGuests()}}
+{\footnotesize\ttfamily void Room\+::\+Set\+Guests (\begin{DoxyParamCaption}\item[{int}]{guests }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a07209f3460b6ebcbaf9193d84724db0d}\label{class_room_a07209f3460b6ebcbaf9193d84724db0d}} 
+\index{Room@{Room}!SetNote@{SetNote}}
+\index{SetNote@{SetNote}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{SetNote()}{SetNote()}}
+{\footnotesize\ttfamily void Room\+::\+Set\+Note (\begin{DoxyParamCaption}\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_ac48eaef1aab9efa78afdf39c4636f5a7}\label{class_room_ac48eaef1aab9efa78afdf39c4636f5a7}} 
+\index{Room@{Room}!SetNumber@{SetNumber}}
+\index{SetNumber@{SetNumber}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{SetNumber()}{SetNumber()}}
+{\footnotesize\ttfamily void Room\+::\+Set\+Number (\begin{DoxyParamCaption}\item[{int}]{number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_room_a284635d6d500926dcd8fd5af2268aaa0}\label{class_room_a284635d6d500926dcd8fd5af2268aaa0}} 
+\index{Room@{Room}!SetStart@{SetStart}}
+\index{SetStart@{SetStart}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{SetStart()}{SetStart()}}
+{\footnotesize\ttfamily void Room\+::\+Set\+Start (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{start }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_room_a6759927fff97d3f9ea8ad92c0abf8d4d}\label{class_room_a6759927fff97d3f9ea8ad92c0abf8d4d}} 
+\index{Room@{Room}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \mbox{\hyperlink{class_room}{Room}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operators for working with files. 
+
+\mbox{\Hypertarget{class_room_a19e1db5a4e7a72d7e70df964b924793b}\label{class_room_a19e1db5a4e7a72d7e70df964b924793b}} 
+\index{Room@{Room}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Room@{Room}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{stream,  }\item[{\mbox{\hyperlink{class_room}{Room}} \&}]{r }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_room_8hpp}{Room.\+hpp}}\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_room_8cpp}{Room.\+cpp}}\end{DoxyCompactItemize}

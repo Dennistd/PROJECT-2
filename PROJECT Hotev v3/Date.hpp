@@ -52,7 +52,7 @@ public:
     friend std::ostream& operator<<(std::ostream& os,const Date& date);
     friend std::istream& operator>>(std::istream& is,Date& date);
     
-    //operators for iteration
+    ///operators for iteration
     Date operator ++();
     Date operator ++(int);
     Date operator --();

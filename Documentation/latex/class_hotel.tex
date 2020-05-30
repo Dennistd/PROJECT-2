@@ -1,0 +1,201 @@
+\hypertarget{class_hotel}{}\doxysection{Hotel Class Reference}
+\label{class_hotel}\index{Hotel@{Hotel}}
+
+
+Class for \mbox{\hyperlink{class_hotel}{Hotel}} Manager.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hotel_a59cc2c3a373abece5a25d730524be2f0}{Hotel}} ()
+\item 
+\mbox{\hyperlink{class_hotel_a5c15a0866bbd4e0abe5ffcf0dda25e4e}{Hotel}} (const \mbox{\hyperlink{class_hotel}{Hotel}} \&other)
+\item 
+\mbox{\hyperlink{class_hotel}{Hotel}} \& \mbox{\hyperlink{class_hotel_a197992b3f1a7d382fd4ce2b8ad235c87}{operator=}} (const \mbox{\hyperlink{class_hotel}{Hotel}} \&other)
+\item 
+\mbox{\hyperlink{class_hotel_ae4c9782535c021bc10c028339dc29310}{$\sim$\+Hotel}} ()
+\item 
+int \mbox{\hyperlink{class_hotel_a2885323896f2cce4af577dc184641ef4}{Get\+Index}} (const \mbox{\hyperlink{class_room}{Room}} \&room)
+\item 
+int \mbox{\hyperlink{class_hotel_a37af91d64c2aaee49d9378db4992914d}{Get\+Index}} (int room\+Number)
+\item 
+\mbox{\hyperlink{class_tuple}{Tuple}} \mbox{\hyperlink{class_hotel_ac4e265bcf8f2a2abf5b1315847278a7e}{at}} (int index) const
+\item 
+size\+\_\+t \mbox{\hyperlink{class_hotel_a8906b20949cb3d17f5d22fc20e413824}{Get\+Size}} () const
+\item 
+void \mbox{\hyperlink{class_hotel_a00fbf00e905b5eedd6af13004c4b65e5}{add\+Room}} (const \mbox{\hyperlink{class_room}{Room}} \&rooom)
+\begin{DoxyCompactList}\small\item\em adds another pait with its room to the hotel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hotel_ac89a6af7d10be0e853d33ceed39ef42f}{add\+Room}} (const \mbox{\hyperlink{class_tuple}{Tuple}} \&tuple)
+\item 
+void \mbox{\hyperlink{class_hotel_a7cec714f95d7d147e258d71c865ef021}{checkin}} (const \mbox{\hyperlink{class_room}{Room}} \&room, const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to, const char $\ast$note)
+\item 
+void \mbox{\hyperlink{class_hotel_a98748d8a7ecd1cb0e6d0c4e4c10cba23}{availability}} (const \mbox{\hyperlink{class_date}{Date}} \&date) const
+\item 
+void \mbox{\hyperlink{class_hotel_a34bfab8670d8bc271499406f95a3aa2b}{checkout}} (\mbox{\hyperlink{class_room}{Room}} room)
+\begin{DoxyCompactList}\small\item\em checks out the rooms in the hotel \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hotel_ad071bab133449b1a7093088750f49085}{report}} (const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to)
+\item 
+bool \mbox{\hyperlink{class_hotel_a85b195349535c51c4e393377c1c72d97}{find}} (int beds, const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to)
+\item 
+void \mbox{\hyperlink{class_hotel_a968e1426b7aa9e43273b3001b5b8574f}{find\+V\+IP}} (int beds, const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to)
+\item 
+void \mbox{\hyperlink{class_hotel_aa05da8f3b0754e3bf261d71fee1508f5}{unavailable}} (\mbox{\hyperlink{class_room}{Room}} room, const \mbox{\hyperlink{class_date}{Date}} \&from, const \mbox{\hyperlink{class_date}{Date}} \&to, const char $\ast$note)
+\item 
+void \mbox{\hyperlink{class_hotel_a4d5e6b1092ce16181291673d794270d2}{print}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_hotel_a6a829d7b9b06a2482fb4bf3e3f9d1d4e}{operator$<$$<$}} (std\+::ostream \&stream, const \mbox{\hyperlink{class_hotel}{Hotel}} \&h)
+\item 
+std\+::istream \& \mbox{\hyperlink{class_hotel_aceef76ae079c0d66157c2de960119a04}{operator$>$$>$}} (std\+::istream \&stream, \mbox{\hyperlink{class_hotel}{Hotel}} \&h)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for \mbox{\hyperlink{class_hotel}{Hotel}} Manager. 
+
+described as an array of pairs of rooms 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_hotel_a59cc2c3a373abece5a25d730524be2f0}\label{class_hotel_a59cc2c3a373abece5a25d730524be2f0}} 
+\index{Hotel@{Hotel}!Hotel@{Hotel}}
+\index{Hotel@{Hotel}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{Hotel()}{Hotel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Hotel\+::\+Hotel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_a5c15a0866bbd4e0abe5ffcf0dda25e4e}\label{class_hotel_a5c15a0866bbd4e0abe5ffcf0dda25e4e}} 
+\index{Hotel@{Hotel}!Hotel@{Hotel}}
+\index{Hotel@{Hotel}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{Hotel()}{Hotel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Hotel\+::\+Hotel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_hotel}{Hotel}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_ae4c9782535c021bc10c028339dc29310}\label{class_hotel_ae4c9782535c021bc10c028339dc29310}} 
+\index{Hotel@{Hotel}!````~Hotel@{$\sim$Hotel}}
+\index{````~Hotel@{$\sim$Hotel}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{$\sim$Hotel()}{~Hotel()}}
+{\footnotesize\ttfamily Hotel\+::$\sim$\+Hotel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_hotel_a00fbf00e905b5eedd6af13004c4b65e5}\label{class_hotel_a00fbf00e905b5eedd6af13004c4b65e5}} 
+\index{Hotel@{Hotel}!addRoom@{addRoom}}
+\index{addRoom@{addRoom}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{addRoom()}{addRoom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Hotel\+::add\+Room (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_room}{Room}} \&}]{rooom }\end{DoxyParamCaption})}
+
+
+
+adds another pait with its room to the hotel 
+
+\mbox{\Hypertarget{class_hotel_ac89a6af7d10be0e853d33ceed39ef42f}\label{class_hotel_ac89a6af7d10be0e853d33ceed39ef42f}} 
+\index{Hotel@{Hotel}!addRoom@{addRoom}}
+\index{addRoom@{addRoom}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{addRoom()}{addRoom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Hotel\+::add\+Room (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_tuple}{Tuple}} \&}]{tuple }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_ac4e265bcf8f2a2abf5b1315847278a7e}\label{class_hotel_ac4e265bcf8f2a2abf5b1315847278a7e}} 
+\index{Hotel@{Hotel}!at@{at}}
+\index{at@{at}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tuple}{Tuple}} Hotel\+::at (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_hotel_a98748d8a7ecd1cb0e6d0c4e4c10cba23}\label{class_hotel_a98748d8a7ecd1cb0e6d0c4e4c10cba23}} 
+\index{Hotel@{Hotel}!availability@{availability}}
+\index{availability@{availability}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{availability()}{availability()}}
+{\footnotesize\ttfamily void Hotel\+::availability (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_hotel_a7cec714f95d7d147e258d71c865ef021}\label{class_hotel_a7cec714f95d7d147e258d71c865ef021}} 
+\index{Hotel@{Hotel}!checkin@{checkin}}
+\index{checkin@{checkin}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{checkin()}{checkin()}}
+{\footnotesize\ttfamily void Hotel\+::checkin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_room}{Room}} \&}]{room,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to,  }\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_a34bfab8670d8bc271499406f95a3aa2b}\label{class_hotel_a34bfab8670d8bc271499406f95a3aa2b}} 
+\index{Hotel@{Hotel}!checkout@{checkout}}
+\index{checkout@{checkout}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{checkout()}{checkout()}}
+{\footnotesize\ttfamily void Hotel\+::checkout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}}}]{room }\end{DoxyParamCaption})}
+
+
+
+checks out the rooms in the hotel 
+
+\mbox{\Hypertarget{class_hotel_a85b195349535c51c4e393377c1c72d97}\label{class_hotel_a85b195349535c51c4e393377c1c72d97}} 
+\index{Hotel@{Hotel}!find@{find}}
+\index{find@{find}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily bool Hotel\+::find (\begin{DoxyParamCaption}\item[{int}]{beds,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_a968e1426b7aa9e43273b3001b5b8574f}\label{class_hotel_a968e1426b7aa9e43273b3001b5b8574f}} 
+\index{Hotel@{Hotel}!findVIP@{findVIP}}
+\index{findVIP@{findVIP}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{findVIP()}{findVIP()}}
+{\footnotesize\ttfamily void Hotel\+::find\+V\+IP (\begin{DoxyParamCaption}\item[{int}]{beds,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_a2885323896f2cce4af577dc184641ef4}\label{class_hotel_a2885323896f2cce4af577dc184641ef4}} 
+\index{Hotel@{Hotel}!GetIndex@{GetIndex}}
+\index{GetIndex@{GetIndex}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{GetIndex()}{GetIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int Hotel\+::\+Get\+Index (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_room}{Room}} \&}]{room }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_a37af91d64c2aaee49d9378db4992914d}\label{class_hotel_a37af91d64c2aaee49d9378db4992914d}} 
+\index{Hotel@{Hotel}!GetIndex@{GetIndex}}
+\index{GetIndex@{GetIndex}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{GetIndex()}{GetIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int Hotel\+::\+Get\+Index (\begin{DoxyParamCaption}\item[{int}]{room\+Number }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_a8906b20949cb3d17f5d22fc20e413824}\label{class_hotel_a8906b20949cb3d17f5d22fc20e413824}} 
+\index{Hotel@{Hotel}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily size\+\_\+t Hotel\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_hotel_a197992b3f1a7d382fd4ce2b8ad235c87}\label{class_hotel_a197992b3f1a7d382fd4ce2b8ad235c87}} 
+\index{Hotel@{Hotel}!operator=@{operator=}}
+\index{operator=@{operator=}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_hotel}{Hotel}} \& Hotel\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_hotel}{Hotel}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_a4d5e6b1092ce16181291673d794270d2}\label{class_hotel_a4d5e6b1092ce16181291673d794270d2}} 
+\index{Hotel@{Hotel}!print@{print}}
+\index{print@{print}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void Hotel\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_hotel_ad071bab133449b1a7093088750f49085}\label{class_hotel_ad071bab133449b1a7093088750f49085}} 
+\index{Hotel@{Hotel}!report@{report}}
+\index{report@{report}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void Hotel\+::report (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_hotel_aa05da8f3b0754e3bf261d71fee1508f5}\label{class_hotel_aa05da8f3b0754e3bf261d71fee1508f5}} 
+\index{Hotel@{Hotel}!unavailable@{unavailable}}
+\index{unavailable@{unavailable}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{unavailable()}{unavailable()}}
+{\footnotesize\ttfamily void Hotel\+::unavailable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_room}{Room}}}]{room,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{from,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{to,  }\item[{const char $\ast$}]{note }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_hotel_a6a829d7b9b06a2482fb4bf3e3f9d1d4e}\label{class_hotel_a6a829d7b9b06a2482fb4bf3e3f9d1d4e}} 
+\index{Hotel@{Hotel}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream,  }\item[{const \mbox{\hyperlink{class_hotel}{Hotel}} \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_hotel_aceef76ae079c0d66157c2de960119a04}\label{class_hotel_aceef76ae079c0d66157c2de960119a04}} 
+\index{Hotel@{Hotel}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Hotel@{Hotel}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{stream,  }\item[{\mbox{\hyperlink{class_hotel}{Hotel}} \&}]{h }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_hotel_8hpp}{Hotel.\+hpp}}\item 
+/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_hotel_8cpp}{Hotel.\+cpp}}\end{DoxyCompactItemize}
