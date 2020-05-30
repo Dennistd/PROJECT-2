@@ -57,19 +57,19 @@ size_t Hotel:: GetSize()const{
     return size;
 }
 
-//void Hotel::addRoom(const Room& room){
-//    Tuple tu(room);
-//   // addRoom(tu);
-//
-//
-//    if(size==capacity){
-//        Resize();
-//    }
-//
-//    addRoom(tu);
-////    hotel[size]=tu;
-////    this->size++;
-//}
+void Hotel::addRoom(const Room& room){
+    Tuple tu(room);
+   // addRoom(tu);
+
+
+    if(size==capacity){
+        Resize();
+    }
+
+    
+    hotel[size]=tu;
+    this->size++;
+}
 void Hotel:: addRoom(const Tuple& tuple){
     if(size==capacity){
         Resize();
@@ -132,11 +132,7 @@ void Hotel:: report(const Date& from,const Date& to){
         }
     }
     //TODO
-    //from>=start
-    //to<=end
-    //for each room
-    //operator -
-    //print + time
+ 
 }
 
 bool Hotel:: find(int beds,const Date& from,const Date& to){
@@ -178,33 +174,6 @@ void Hotel:: findVIP(int beds,const Date& from,const Date& to){
         at(index).makeUnavailable(from, to, note);
         
     
-    
-    // !isAvailable(from,to)
-    
-    
-    //-------------------------
-    //    int index = 0;
-    //
-    //    for (int i = 0; i < size; i++) {
-    //        if (hotel[i].GetFreeBeds() == beds) {
-    //            index = i;
-    //
-    //            if (hotel[i].GetRoom().isAvailable(from, to)) {
-    //                hotel[i].print();
-    //            }
-    //        }
-    //    }
-    //
-    //    for (int j = index + 1; j < size; j++) {
-    //        if (hotel[j].GetRoom().isAvailable(from, to) && hotel[j].GetFreeBeds() == beds) {
-    //            hotel[j] = hotel[index];
-    //            hotel[j].makeEmpty();
-    //
-    //            hotel[index].print();
-    //
-    //        }
-    //    }
-}
 
 std::ostream& operator<<(std::ostream& stream, const Hotel& h){
     int size=h.GetSize();
