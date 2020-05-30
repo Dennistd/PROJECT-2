@@ -139,8 +139,12 @@ const char* Room:: GetNote()const{
 
 void Room:: SetGuests(int guests){
     
-    if(guests<=this->beds)
+    if(guests<=this->beds){
         this->guests=guests;
+    }
+    else{
+        throw "The room can not accepts this many guests";
+    }
 }
 
 
@@ -177,16 +181,15 @@ void Room:: print()const{
     std::cout<<"Room|"<<number<<"| "<<"with " <<beds<<" beds"<<std::endl;
 } //to be continued
 
-bool Room:: isAvailable(const Date& from,const Date& to)const{
+bool Room:: isAvailable(const Date& from,const Date& to)const{ // all the days in this period are continius and ordered
     if(from>to){
         return false;
     }
     
-   // return !GetIsTaken() || from>=GetFinish() || to<=GetStart();
      
     return !GetIsTaken() || (GetStart()>=to || GetFinish()<=from);
-} //check again
-// all the days in this period are continius and ordered
+}
+
 
 
 void Room:: makeUnavailable(const Date& from,const Date& to, const char* note){

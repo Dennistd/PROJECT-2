@@ -226,20 +226,20 @@ Date  previous(const Date& date){
     
 }
 
-Date Date:: operator ++(){ // префиксен оператор
+Date Date:: operator ++(){ // prefix
     *this=next(*this);
     return *this;
 }
-Date Date:: operator ++(int){ // постфиксен оператор
+Date Date:: operator ++(int){ // postfix
     Date date=*this;
     *this=next(date);
     return date;
 }
-Date Date:: operator --(){ // префиксен оператор
+Date Date:: operator --(){ // prefix
   *this=previous(*this);
     return *this;
 }
-Date Date:: operator --(int){  // постфиксен оператор
+Date Date:: operator --(int){  // postfix
     Date date=*this;
        *this=previous(date);
        return date;

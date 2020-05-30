@@ -12,46 +12,47 @@
 #include <fstream>
 #include <stdio.h>
 
-/// Клас за дата
+/// Class for the date
 ///
-/// Приема вида гггг/мм/дд
+/// HAs the form of yyyy/mm/dd
 class Date{
     int year;
     int month;
     int day;
     
-    bool IsLeapYear(); //проверява дали годината е високосна
+    bool IsLeapYear();
 public:
     
-    /// Конструктори с и без параметри
+   
     Date(int year,int month,int day);
     Date();
     
-    ///Мутатори
+    
     void SetYear(int);
     void SetMonth(int);
     void SetDay(int);
-    ///Селектори
+    
     int GetYear()const;
     int GetMonth()const;
     int GetDay()const;
     
-   bool isValid()const;
+   bool isValid()const; //checks all the conditions for the format of the date
 
     
     
-    void printDate()const; //Отпечатва годината във зададения формат
+    void printDate()const; //Prints the date in a stylised format
     
-    ///Оператори за сравнение
+    ///Operators for comparing
     friend bool operator>(const Date& lhs,const Date& rhs);
     friend bool operator>=(const Date& lhs,const Date& rhs);
     friend bool operator<(const Date& lhs,const Date& rhs);
     friend bool operator<=(const Date& lhs,const Date& rhs);
     friend bool operator==(const Date& lhs,const Date& rhs);
-    ///Оператори за работа с файл
+    ///Operators for working with a file
     friend std::ostream& operator<<(std::ostream& os,const Date& date);
     friend std::istream& operator>>(std::istream& is,Date& date);
     
+    //operators for iteration
     Date operator ++();
     Date operator ++(int);
     Date operator --();

@@ -36,7 +36,7 @@ void Hotel::Resize(){
 
 Hotel::Hotel(){
     size=0;
-    capacity=0;
+    capacity=DEFAULT_CAPACITY;
     hotel=new Tuple[capacity];
 }
 Hotel::Hotel(const Hotel& other){
@@ -137,7 +137,10 @@ void Hotel:: report(const Date& from,const Date& to){
 
 bool Hotel:: find(int beds,const Date& from,const Date& to){
     
-    //тука нещо проверки да има
+    if(to<from){
+        std::cout<<"Enter a valid date range!"<<std::endl;
+        return false;
+    }
     
     for(int i=0;i<size;i++){
         if( hotel[i].GetFreeBeds()>=beds && hotel[i].GetRoom().isAvailable(from, to)){

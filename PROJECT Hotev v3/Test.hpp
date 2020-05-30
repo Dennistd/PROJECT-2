@@ -15,22 +15,22 @@
 const int LENGTH=1024;
 const int COMMAND_MAX_SIZE=30;
 
-///Клас който приема информация от потребилтеля  (потребителски интерфейс)
+///Class whicj collects data from the user  (user interface)
 ///
-///  Работи с потребителски вход от конзолата или с потребителски файл
-/// Отговаря за изпълнението на командите свързани с календара или с файла
+///  Works with data from the console and from a user provided file
+/// Takes care of the commands
 class Test{
-    char* command; //потребителска команда
+    char* command; //user provided command
     int len;
-    Hotel h; //обект от тип хотел, върху когото да извършваме промените
+    Hotel h; //object of type hotel
     
 public:
     Test(Hotel hotel,const char* command);
     
     void SetCommand(const char* command);
     
-    void Command(); //изпълнява някоя от фънкциите на хотела спрямо подадения низ
-    void FileCommand(); //изпълнява някоя от фънкциите на файла спрямо подадения низ
+    void Command(); //by the given string it runs the hotel functions
+    void FileCommand(); //by the given string it runs the file functions
 };
 
 #endif /* Test_hpp */

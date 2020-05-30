@@ -11,7 +11,7 @@ using namespace std;
 
 int main() {
     
-    ///Прост пример за работа на системата
+    ///Simple example of the system workings
    
     //char command[COMMAND_MAX_SIZE];
     
@@ -34,7 +34,7 @@ int main() {
     Trivago.addRoom(secondFloor);
 
     
-   // Trivago.print();
+    Trivago.print();
 
     
 

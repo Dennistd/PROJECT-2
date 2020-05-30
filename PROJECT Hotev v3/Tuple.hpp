@@ -12,9 +12,9 @@
 #include <stdio.h>
 #include "Room.hpp"
 
-///Клас наредена двойка
+///Class tuple
 ///
-/// приема вида <брой стободни легла ; стая>
+/// pair of a room and its free beds <Room ; count of beds>
 class Tuple{
     
     int freeBeds;
@@ -27,7 +27,7 @@ public:
     Room GetRoom()const;
     int GetFreeBeds()const;
     
-    //Резервира стаята в двойката
+    //reserves the room in this pair
     void checkin(const Date& from,const Date& to,const char* note);
     void checkin(const Date& from,const Date& to,const char* note,int guests);
     

@@ -12,13 +12,13 @@
 #include <stdio.h>
 #include "Tuple.hpp"
 
-///Основния ни клас хотел
+///Class for Hotel Manager
 ///
-///Представлява масив от стаи
+///described as an array of pairs of rooms
 class Hotel{
     Tuple* hotel;
-    size_t size; //размер в момента
-    size_t capacity; //капацитет
+    size_t size; //current size
+    size_t capacity; //the maximum capacity
     
     void CopyFrom(const Hotel& other);
     void Free();
@@ -31,20 +31,20 @@ public:
     Hotel& operator=(const Hotel& other);
     ~Hotel();
     
-    int GetIndex(const Room& room ); //намира индекс по дадена стая
-    int GetIndex(int roomNumber); //намира индекс по даден номер на стая;
-    Tuple at(int index)const; //стая на зададена позиция
+    int GetIndex(const Room& room ); //finds the index by a given date
+    int GetIndex(int roomNumber); //finds the index by a given room number
+    Tuple at(int index)const; //The pair on a given position
     size_t GetSize()const;
     
-    ///Добавя стая към хотела
+    ///adds another pait with its room to the hotel
     void addRoom(const Room& rooom);
     void addRoom(const Tuple& tuple);
     
     void checkin(const Room& room,const Date& from,const Date& to,const char* note);
     
-    void availability(const Date& date)const; //информация за заетост
+    void availability(const Date& date)const; //gives information about the status of the rooms
     
-    ///Освобождава стая в хотела;
+    ///checks out the rooms in the hotel
     void checkout(Room room);
     
     void report(const Date& from,const Date& to);

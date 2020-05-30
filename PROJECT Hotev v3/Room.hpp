@@ -13,24 +13,25 @@
 
 #include "Date.hpp"
 
-///Клас за стая
+const int DEFAULT_CAPACITY=8;
+///Class for the room unit
 ///
-///Описва се от номера си, броя легла с които разполага и в зависимост от това дали е заета се описва с различни данни
+///It is described by its number of beds and if it is taken or not
 class Room{
     
-    int number; //Номер
-    int beds; //Брой легла
+    int number; //room number #
+    int beds; //count of beds
     
-    bool IsTaken; //Заета или не
+    bool IsTaken; //taken or nor
     
-    int guests; //Брой гости, който са настанени
+    int guests; //count of people residing in the room
     
-    ///  Период на използване
+    ///  Period of usage for the room
     Date start;
     Date finish;
     
     
-    char* note; //Бележка
+    char* note; //Side note given for discription
     size_t len;
     
     void Free();
@@ -38,7 +39,7 @@ class Room{
     
 public:
     
-    /// Конструктори с различни параметри
+    //BIG 4
     Room();
     Room(int number, int beds);
     Room(int number,int beds,int guests,const Date& start,const Date& end,const char* note);
@@ -47,7 +48,7 @@ public:
     Room& operator=(const Room& other);
     ~Room();
     
-    //Мутатори
+    
     void SetNumber(int number);
     void SetBeds(int beds);
     void SetStart(const Date& start);
@@ -55,7 +56,7 @@ public:
     void SetNote(const char* note);
     void SetGuests(int guests);
     
-    //Селектори
+    
     int GetNumber()const;
     int GetBeds()const;
     int GetGuests()const;
@@ -65,30 +66,30 @@ public:
     const char* GetNote()const;
     
     
-    ///Функциии за резервация
+    ///Function for making a reservation
     void checkin(const Date& from,const Date& to,const char* note);
     void checkin(const Date& from,const Date& to,const char* note,int guests);
     
-    ///Функция за освобождаване
+    ///Function for checking out of the room
     void makeEmpty();
     
-    ///Проверява дали гостите от стаята могат да бъдат преместени в посочена друга
+    ///checks if the guests in the room can be moced to another
     bool canBeChanged(int beds)const;
     bool canBeChanged(int beds,const Date& from,const Date& to)const;
     
     bool IsTakenOn(const Date& date)const;
     
-    bool isAvailable(const Date& from,const Date& to)const; //Дали стаята е свободна в посочения период
+    bool isAvailable(const Date& from,const Date& to)const; //if the room is available in the given period
     
     int countDays(const Date& date);
     bool IsUsed(const Date& from,const Date& to)const;
     
-    void print()const; //Принтира на конзолата информация за стаята в подходящ формат
+    void print()const; //orints in a stylised format
     
-    /// Прави стаята недостъпна за определен период
+    /// the room is set to be unavailable for a given period and the reason why
     void makeUnavailable(const Date& from,const Date& to, const char* note);
     
-    //Оператори за работа с файл
+    ///Operators for working with files
     friend std::ostream& operator<<(std::ostream& stream, const Room& r);
     friend std::istream& operator>>(std::istream& stream, Room& r);
     
