@@ -28,7 +28,7 @@ public:
     void write(); //saves the current hotel in the file
     void writeTo(const char* otherName); //saves the current hotel in a file with given name
     void read(); ////opens the file derives information from it puts it in the current hotel
-  
+    
 };
 
 #endif /* FileManager_hpp */

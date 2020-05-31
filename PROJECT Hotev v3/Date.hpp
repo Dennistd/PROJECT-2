@@ -23,7 +23,7 @@ class Date{
     bool IsLeapYear();
 public:
     
-   
+    
     Date(int year,int month,int day);
     Date();
     
@@ -36,8 +36,8 @@ public:
     int GetMonth()const;
     int GetDay()const;
     
-   bool isValid()const; //checks all the conditions for the format of the date
-
+    bool isValid()const; //checks all the conditions for the format of the date
+    
     
     
     void printDate()const; //Prints the date in a stylised format

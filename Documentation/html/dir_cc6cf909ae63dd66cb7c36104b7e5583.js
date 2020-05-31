@@ -1,9 +1,7 @@
 var dir_cc6cf909ae63dd66cb7c36104b7e5583 =
 [
     [ "Date.cpp", "_date_8cpp.html", "_date_8cpp" ],
-    [ "Date.hpp", "_date_8hpp.html", [
-      [ "Date", "class_date.html", "class_date" ]
-    ] ],
+    [ "Date.hpp", "_date_8hpp.html", "_date_8hpp" ],
     [ "FileManager.cpp", "_file_manager_8cpp.html", null ],
     [ "FileManager.hpp", "_file_manager_8hpp.html", [
       [ "FileManager", "class_file_manager.html", "class_file_manager" ]

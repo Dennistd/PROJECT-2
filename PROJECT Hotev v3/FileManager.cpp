@@ -21,11 +21,21 @@ void FileManager:: SetFileName(const char* fileName){
 
 void FileManager:: write(){
     std::ofstream file(fileName);
+    if(file.fail()){
+        std::cout<<"Error while opening this file"<<std::endl;
+        return;
+    }
     file << this->hotel;
     
 }
 void FileManager:: read(){
     std::ifstream file(fileName);
+    
+    if(file.fail()){
+        std::cout<<"Error while opening this file"<<std::endl;
+        return;
+    }
+    
     Hotel buffer;
     file>>buffer;
     this->hotel=buffer;
@@ -33,5 +43,11 @@ void FileManager:: read(){
 
 void FileManager:: writeTo(const char* otherName){
     std::ofstream other(otherName);
+    
+    if(other.fail()){
+        std::cout<<"Error while opening this file"<<std::endl;
+        return;
+    }
+    
     other<<this->hotel;
 }

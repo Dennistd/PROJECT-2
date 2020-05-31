@@ -16,9 +16,7 @@ var class_date =
     [ "SetYear", "class_date.html#acf593cbf5fe5859db3050ec68aa92497", null ],
     [ "operator<", "class_date.html#a611ba98c72bec2ae82bbf086b81563ef", null ],
     [ "operator<<", "class_date.html#a1862604492a841a6b98e1a3061d95b96", null ],
-    [ "operator<=", "class_date.html#acacb699d0fcffd2443c121586b7c22da", null ],
     [ "operator==", "class_date.html#a27425be265a0cc57e4f731825154ec4d", null ],
     [ "operator>", "class_date.html#a4e4faf476e7d66ef88aaca8b11a60175", null ],
-    [ "operator>=", "class_date.html#aa72d3f6e17c7aab4d16e9e50b5069e1a", null ],
     [ "operator>>", "class_date.html#ad38747168f2005159180860e5509b26e", null ]
 ];

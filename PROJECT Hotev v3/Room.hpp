@@ -14,6 +14,7 @@
 #include "Date.hpp"
 
 const int DEFAULT_CAPACITY=8;
+const int LENGTH=1024;
 ///Class for the room unit
 ///
 ///It is described by its number of beds and if it is taken or not

@@ -32,7 +32,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Hotel
    </div>
-   <div id="projectbrief">Hotel manager</div>
+   <div id="projectbrief">Manager for any kind of hotel</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -120,31 +120,32 @@ $(document).ready(function(){initNavTree('_tuple_8hpp_source.html',''); initResi
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_tuple.html#a07c616afb195cf694e8814318fbd2aa8">Tuple</a>(<span class="keyword">const</span> <a class="code" href="class_room.html">Room</a>&amp; room);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_room.html">Room</a> <a class="code" href="class_tuple.html#acc46b625310590069177d23fb34b47f2">GetRoom</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_tuple.html#a2c129a243d713f2924de8fb5bdf6d5a6">GetFreeBeds</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">//reserves the room in this pair</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#a98e3c8898e09ca73c0b52c4bc6e9945e">checkin</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; from,<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; to,<span class="keyword">const</span> <span class="keywordtype">char</span>* note);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#a98e3c8898e09ca73c0b52c4bc6e9945e">checkin</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; from,<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; to,<span class="keyword">const</span> <span class="keywordtype">char</span>* note,<span class="keywordtype">int</span> guests);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#a2afe75f68aa7ea1f67d711d844368a97">makeEmpty</a>();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#aa94bedff838cb92d5bee7ec75b4b716e">makeUnavailable</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; from,<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; to, <span class="keyword">const</span> <span class="keywordtype">char</span>* note);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#a7069b579549f7bfc1c2271a93d080662">print</a>()<span class="keyword">const</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_room.html">Room</a>&amp; <a class="code" href="class_tuple.html#acc46b625310590069177d23fb34b47f2">GetRoom</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_tuple.html#a2c129a243d713f2924de8fb5bdf6d5a6">GetFreeBeds</a>()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="comment">//reserves the room in this pair</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#a98e3c8898e09ca73c0b52c4bc6e9945e">checkin</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; from,<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; to,<span class="keyword">const</span> <span class="keywordtype">char</span>* note);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#a98e3c8898e09ca73c0b52c4bc6e9945e">checkin</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; from,<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; to,<span class="keyword">const</span> <span class="keywordtype">char</span>* note,<span class="keywordtype">int</span> guests);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#a2afe75f68aa7ea1f67d711d844368a97">makeEmpty</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#aa94bedff838cb92d5bee7ec75b4b716e">makeUnavailable</a>(<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; from,<span class="keyword">const</span> <a class="code" href="class_date.html">Date</a>&amp; to, <span class="keyword">const</span> <span class="keywordtype">char</span>* note);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tuple.html#a7069b579549f7bfc1c2271a93d080662">print</a>()<span class="keyword">const</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Tuple_hpp */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* Tuple_hpp */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclass_tuple_html"><div class="ttname"><a href="class_tuple.html">Tuple</a></div><div class="ttdoc">Class tuple.</div><div class="ttdef"><b>Definition:</b> Tuple.hpp:18</div></div>
-<div class="ttc" id="aclass_tuple_html_a7069b579549f7bfc1c2271a93d080662"><div class="ttname"><a href="class_tuple.html#a7069b579549f7bfc1c2271a93d080662">Tuple::print</a></div><div class="ttdeci">void print() const</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:25</div></div>
-<div class="ttc" id="aclass_room_html"><div class="ttname"><a href="class_room.html">Room</a></div><div class="ttdoc">Class for the room unit.</div><div class="ttdef"><b>Definition:</b> Room.hpp:20</div></div>
+<div class="ttc" id="aclass_tuple_html_a7069b579549f7bfc1c2271a93d080662"><div class="ttname"><a href="class_tuple.html#a7069b579549f7bfc1c2271a93d080662">Tuple::print</a></div><div class="ttdeci">void print() const</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:28</div></div>
+<div class="ttc" id="aclass_room_html"><div class="ttname"><a href="class_room.html">Room</a></div><div class="ttdoc">Class for the room unit.</div><div class="ttdef"><b>Definition:</b> Room.hpp:21</div></div>
 <div class="ttc" id="aclass_tuple_html_acc46b625310590069177d23fb34b47f2"><div class="ttname"><a href="class_tuple.html#acc46b625310590069177d23fb34b47f2">Tuple::GetRoom</a></div><div class="ttdeci">Room GetRoom() const</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:18</div></div>
-<div class="ttc" id="aclass_tuple_html_a2afe75f68aa7ea1f67d711d844368a97"><div class="ttname"><a href="class_tuple.html#a2afe75f68aa7ea1f67d711d844368a97">Tuple::makeEmpty</a></div><div class="ttdeci">void makeEmpty()</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:30</div></div>
+<div class="ttc" id="aclass_tuple_html_a2afe75f68aa7ea1f67d711d844368a97"><div class="ttname"><a href="class_tuple.html#a2afe75f68aa7ea1f67d711d844368a97">Tuple::makeEmpty</a></div><div class="ttdeci">void makeEmpty()</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:33</div></div>
 <div class="ttc" id="aclass_tuple_html_a07c616afb195cf694e8814318fbd2aa8"><div class="ttname"><a href="class_tuple.html#a07c616afb195cf694e8814318fbd2aa8">Tuple::Tuple</a></div><div class="ttdeci">Tuple()</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:11</div></div>
-<div class="ttc" id="aclass_tuple_html_aa94bedff838cb92d5bee7ec75b4b716e"><div class="ttname"><a href="class_tuple.html#aa94bedff838cb92d5bee7ec75b4b716e">Tuple::makeUnavailable</a></div><div class="ttdeci">void makeUnavailable(const Date &amp;from, const Date &amp;to, const char *note)</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:34</div></div>
-<div class="ttc" id="aclass_tuple_html_a2c129a243d713f2924de8fb5bdf6d5a6"><div class="ttname"><a href="class_tuple.html#a2c129a243d713f2924de8fb5bdf6d5a6">Tuple::GetFreeBeds</a></div><div class="ttdeci">int GetFreeBeds() const</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:21</div></div>
-<div class="ttc" id="aclass_tuple_html_a98e3c8898e09ca73c0b52c4bc6e9945e"><div class="ttname"><a href="class_tuple.html#a98e3c8898e09ca73c0b52c4bc6e9945e">Tuple::checkin</a></div><div class="ttdeci">void checkin(const Date &amp;from, const Date &amp;to, const char *note)</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:39</div></div>
+<div class="ttc" id="aclass_tuple_html_aa94bedff838cb92d5bee7ec75b4b716e"><div class="ttname"><a href="class_tuple.html#aa94bedff838cb92d5bee7ec75b4b716e">Tuple::makeUnavailable</a></div><div class="ttdeci">void makeUnavailable(const Date &amp;from, const Date &amp;to, const char *note)</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:37</div></div>
+<div class="ttc" id="aclass_tuple_html_a2c129a243d713f2924de8fb5bdf6d5a6"><div class="ttname"><a href="class_tuple.html#a2c129a243d713f2924de8fb5bdf6d5a6">Tuple::GetFreeBeds</a></div><div class="ttdeci">int GetFreeBeds() const</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:24</div></div>
+<div class="ttc" id="aclass_tuple_html_a98e3c8898e09ca73c0b52c4bc6e9945e"><div class="ttname"><a href="class_tuple.html#a98e3c8898e09ca73c0b52c4bc6e9945e">Tuple::checkin</a></div><div class="ttdeci">void checkin(const Date &amp;from, const Date &amp;to, const char *note)</div><div class="ttdef"><b>Definition:</b> Tuple.cpp:42</div></div>
 <div class="ttc" id="a_room_8hpp_html"><div class="ttname"><a href="_room_8hpp.html">Room.hpp</a></div></div>
 <div class="ttc" id="aclass_date_html"><div class="ttname"><a href="class_date.html">Date</a></div><div class="ttdoc">Class for the date.</div><div class="ttdef"><b>Definition:</b> Date.hpp:18</div></div>
 <!-- start footer part -->

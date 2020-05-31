@@ -5,6 +5,10 @@
 Class tuple.  
 
 
+
+
+{\ttfamily \#include $<$Tuple.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -13,6 +17,8 @@ Class tuple.
 \mbox{\hyperlink{class_tuple_aaeecc03056f99a5b65241df64605c2f2}{Tuple}} (const \mbox{\hyperlink{class_room}{Room}} \&room)
 \item 
 \mbox{\hyperlink{class_room}{Room}} \mbox{\hyperlink{class_tuple_acc46b625310590069177d23fb34b47f2}{Get\+Room}} () const
+\item 
+\mbox{\hyperlink{class_room}{Room}} \& \mbox{\hyperlink{class_tuple_a89280bcb26f8533f736e6a5f74449e4a}{Get\+Room}} ()
 \item 
 int \mbox{\hyperlink{class_tuple_a2c129a243d713f2924de8fb5bdf6d5a6}{Get\+Free\+Beds}} () const
 \item 
@@ -31,7 +37,7 @@ void \mbox{\hyperlink{class_tuple_a7069b579549f7bfc1c2271a93d080662}{print}} () 
 \doxysubsection{Detailed Description}
 Class tuple. 
 
-pair of a room and its free beds $<$\mbox{\hyperlink{class_room}{Room}} ; count of beds$>$ 
+pair of a room and its free beds $<$\mbox{\hyperlink{class_room}{Room}} ; count of free beds$>$ 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_tuple_a07c616afb195cf694e8814318fbd2aa8}\label{class_tuple_a07c616afb195cf694e8814318fbd2aa8}} 
@@ -67,10 +73,16 @@ pair of a room and its free beds $<$\mbox{\hyperlink{class_room}{Room}} ; count 
 \doxysubsubsection{\texorpdfstring{GetFreeBeds()}{GetFreeBeds()}}
 {\footnotesize\ttfamily int Tuple\+::\+Get\+Free\+Beds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+\mbox{\Hypertarget{class_tuple_a89280bcb26f8533f736e6a5f74449e4a}\label{class_tuple_a89280bcb26f8533f736e6a5f74449e4a}} 
+\index{Tuple@{Tuple}!GetRoom@{GetRoom}}
+\index{GetRoom@{GetRoom}!Tuple@{Tuple}}
+\doxysubsubsection{\texorpdfstring{GetRoom()}{GetRoom()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_room}{Room}} \& Tuple\+::\+Get\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{class_tuple_acc46b625310590069177d23fb34b47f2}\label{class_tuple_acc46b625310590069177d23fb34b47f2}} 
 \index{Tuple@{Tuple}!GetRoom@{GetRoom}}
 \index{GetRoom@{GetRoom}!Tuple@{Tuple}}
-\doxysubsubsection{\texorpdfstring{GetRoom()}{GetRoom()}}
+\doxysubsubsection{\texorpdfstring{GetRoom()}{GetRoom()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily \mbox{\hyperlink{class_room}{Room}} Tuple\+::\+Get\+Room (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 \mbox{\Hypertarget{class_tuple_a2afe75f68aa7ea1f67d711d844368a97}\label{class_tuple_a2afe75f68aa7ea1f67d711d844368a97}} 
@@ -91,9 +103,3 @@ pair of a room and its free beds $<$\mbox{\hyperlink{class_room}{Room}} ; count 
 \doxysubsubsection{\texorpdfstring{print()}{print()}}
 {\footnotesize\ttfamily void Tuple\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_tuple_8hpp}{Tuple.\+hpp}}\item 
-/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_tuple_8cpp}{Tuple.\+cpp}}\end{DoxyCompactItemize}

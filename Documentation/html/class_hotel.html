@@ -32,7 +32,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Hotel
    </div>
-   <div id="projectbrief">Hotel manager</div>
+   <div id="projectbrief">Manager for any kind of hotel</div>
   </td>
    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -103,6 +103,8 @@ $(document).ready(function(){initNavTree('class_hotel.html',''); initResizable()
 
 <p>Class for <a class="el" href="class_hotel.html" title="Class for Hotel Manager.">Hotel</a> Manager.  
  <a href="class_hotel.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_hotel_8hpp_source.html">Hotel.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -120,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a37af91d64c2aaee49d9378db4992914d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4e265bcf8f2a2abf5b1315847278a7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tuple.html">Tuple</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hotel.html#ac4e265bcf8f2a2abf5b1315847278a7e">at</a> (int index) const</td></tr>
 <tr class="separator:ac4e265bcf8f2a2abf5b1315847278a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab356615cef41307b96aee89a79f9dde"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_tuple.html">Tuple</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hotel.html#aab356615cef41307b96aee89a79f9dde">at</a> (int index)</td></tr>
+<tr class="separator:aab356615cef41307b96aee89a79f9dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8906b20949cb3d17f5d22fc20e413824"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hotel.html#a8906b20949cb3d17f5d22fc20e413824">GetSize</a> () const</td></tr>
 <tr class="separator:a8906b20949cb3d17f5d22fc20e413824"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00fbf00e905b5eedd6af13004c4b65e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hotel.html#a00fbf00e905b5eedd6af13004c4b65e5">addRoom</a> (const <a class="el" href="class_room.html">Room</a> &amp;rooom)</td></tr>
@@ -140,6 +144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a85b195349535c51c4e393377c1c72d97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a968e1426b7aa9e43273b3001b5b8574f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hotel.html#a968e1426b7aa9e43273b3001b5b8574f">findVIP</a> (int beds, const <a class="el" href="class_date.html">Date</a> &amp;from, const <a class="el" href="class_date.html">Date</a> &amp;to)</td></tr>
 <tr class="separator:a968e1426b7aa9e43273b3001b5b8574f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3a79fa06fa9f033df6b068d1905b220"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hotel.html#ab3a79fa06fa9f033df6b068d1905b220">CanBeFuond</a> (int beds, const <a class="el" href="class_room.html">Room</a> &amp;room, const <a class="el" href="class_date.html">Date</a> &amp;from, const <a class="el" href="class_date.html">Date</a> &amp;to, int &amp;count)</td></tr>
+<tr class="separator:ab3a79fa06fa9f033df6b068d1905b220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa05da8f3b0754e3bf261d71fee1508f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hotel.html#aa05da8f3b0754e3bf261d71fee1508f5">unavailable</a> (<a class="el" href="class_room.html">Room</a> room, const <a class="el" href="class_date.html">Date</a> &amp;from, const <a class="el" href="class_date.html">Date</a> &amp;to, const char *note)</td></tr>
 <tr class="separator:aa05da8f3b0754e3bf261d71fee1508f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d5e6b1092ce16181291673d794270d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hotel.html#a4d5e6b1092ce16181291673d794270d2">print</a> () const</td></tr>
@@ -247,8 +253,26 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="aab356615cef41307b96aee89a79f9dde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab356615cef41307b96aee89a79f9dde">&#9670;&nbsp;</a></span>at() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_tuple.html">Tuple</a> &amp; Hotel::at </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ac4e265bcf8f2a2abf5b1315847278a7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4e265bcf8f2a2abf5b1315847278a7e">&#9670;&nbsp;</a></span>at()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4e265bcf8f2a2abf5b1315847278a7e">&#9670;&nbsp;</a></span>at() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -277,6 +301,52 @@ Friends</h2></td></tr>
           <td class="paramtype">const <a class="el" href="class_date.html">Date</a> &amp;&#160;</td>
           <td class="paramname"><em>date</em></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab3a79fa06fa9f033df6b068d1905b220"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3a79fa06fa9f033df6b068d1905b220">&#9670;&nbsp;</a></span>CanBeFuond()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Hotel::CanBeFuond </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_room.html">Room</a> &amp;&#160;</td>
+          <td class="paramname"><em>room</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_date.html">Date</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_date.html">Date</a> &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>count</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -640,10 +710,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following files:<ul>
-<li>/Users/dennisdimitrov/Desktop/PROJECT Hotev v3/PROJECT Hotev v3/<a class="el" href="_hotel_8hpp_source.html">Hotel.hpp</a></li>
-<li>/Users/dennisdimitrov/Desktop/PROJECT Hotev v3/PROJECT Hotev v3/<a class="el" href="_hotel_8cpp.html">Hotel.cpp</a></li>
-</ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

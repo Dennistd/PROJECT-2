@@ -8,7 +8,7 @@
 
 #include "Test.hpp"
 Date dateInit(){
-    int fromYear; // check
+    int fromYear; 
     std::cin>>fromYear;
     int fromMonth;
     std::cin>>fromMonth;
@@ -32,7 +32,7 @@ void  Test:: SetCommand(const char* command){
 }
 
 void Test:: Command(){
-
+    
     
     if(strcmp(command,"checkin")==0){
         
@@ -63,18 +63,18 @@ void Test:: Command(){
         std::cin>>toDay;
         Date to(toYear,toMonth,toDay);
         
-       std::cout<<"Enter the number of guests"<<std::endl;
+        std::cout<<"Enter the number of guests"<<std::endl;
         int guests;
         std::cin>>guests;
         
         int index=h.GetIndex(roomNumber);
         
         if(index!=-1){
-             h.at(index).checkin(from, to, note, guests);
+            h.at(index).checkin(from, to, note, guests);
         }
     }
     
-   else if(strcmp(command,"availability")==0){
+    else if(strcmp(command,"availability")==0){
         std::cout<<"Which date do you want information for?"<<std::endl;
         Date date=dateInit();
         
@@ -82,7 +82,7 @@ void Test:: Command(){
         
     }
     
-   else if(strcmp(command,"chekout")==0){
+    else if(strcmp(command,"chekout")==0){
         std::cout<<"Enter the room number to be checked out"<<std::endl;
         int roomNumber;
         std::cin>>roomNumber;
@@ -92,7 +92,7 @@ void Test:: Command(){
         h.checkout(room);
     }
     
-   else if(strcmp(command,"report")==0){
+    else if(strcmp(command,"report")==0){
         std::cout<<"Enter the starting date: "<<std::endl;
         Date from=dateInit();
         std::cout<<"Enter the last date: "<<std::endl;
@@ -100,7 +100,7 @@ void Test:: Command(){
         
         h.report(from, to);
     }
-   else  if(strcmp(command,"find")==0){
+    else  if(strcmp(command,"find")==0){
         int beds;
         std::cout<<"Enter the number of wanted beds: "<<std::endl;
         std::cin>>beds;
@@ -112,7 +112,7 @@ void Test:: Command(){
         
         h.find(beds, from, to);
     }
-   else  if(strcmp(command,"find!")==0){
+    else  if(strcmp(command,"find!")==0){
         int beds;
         std::cout<<"You are a VIP guest of ours, enjoy your stay"<<std::endl;
         std::cout<<"Enter the number of wanted beds: "<<std::endl;
@@ -125,7 +125,7 @@ void Test:: Command(){
         
         h.findVIP(beds, from, to);
     }
-   else  if(strcmp(command,"unavailable")==0){
+    else  if(strcmp(command,"unavailable")==0){
         int numberRoom;
         std::cout<<"Enter the number of your room: "<<std::endl;
         std::cin>>numberRoom;
@@ -147,9 +147,9 @@ void Test:: Command(){
         h.unavailable(room, from, to, note);
     }
     
-   else{
-       std::cout<<"Invalid command for the hotel"<<std::endl;
-   }
+    else{
+        std::cout<<"Invalid command for the hotel"<<std::endl;
+    }
 }
 void Test:: FileCommand(){
     

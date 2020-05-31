@@ -5,6 +5,10 @@
 Class for the date.  
 
 
+
+
+{\ttfamily \#include $<$Date.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -41,11 +45,7 @@ void \mbox{\hyperlink{class_date_a6d5873842b1ede5d95399220d7994c7b}{print\+Date}
 \item 
 bool \mbox{\hyperlink{class_date_a4e4faf476e7d66ef88aaca8b11a60175}{operator$>$}} (const \mbox{\hyperlink{class_date}{Date}} \&lhs, const \mbox{\hyperlink{class_date}{Date}} \&rhs)
 \begin{DoxyCompactList}\small\item\em Operators for comparing. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{class_date_aa72d3f6e17c7aab4d16e9e50b5069e1a}{operator$>$=}} (const \mbox{\hyperlink{class_date}{Date}} \&lhs, const \mbox{\hyperlink{class_date}{Date}} \&rhs)
-\item 
 bool \mbox{\hyperlink{class_date_a611ba98c72bec2ae82bbf086b81563ef}{operator$<$}} (const \mbox{\hyperlink{class_date}{Date}} \&lhs, const \mbox{\hyperlink{class_date}{Date}} \&rhs)
-\item 
-bool \mbox{\hyperlink{class_date_acacb699d0fcffd2443c121586b7c22da}{operator$<$=}} (const \mbox{\hyperlink{class_date}{Date}} \&lhs, const \mbox{\hyperlink{class_date}{Date}} \&rhs)
 \item 
 bool \mbox{\hyperlink{class_date_a27425be265a0cc57e4f731825154ec4d}{operator==}} (const \mbox{\hyperlink{class_date}{Date}} \&lhs, const \mbox{\hyperlink{class_date}{Date}} \&rhs)
 \item 
@@ -58,7 +58,7 @@ std\+::istream \& \mbox{\hyperlink{class_date_ad38747168f2005159180860e5509b26e}
 \doxysubsection{Detailed Description}
 Class for the date. 
 
-H\+As the form of yyyy/mm/dd 
+Has the form of yyyy/mm/dd 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_date_a5874432b5f7339205866055201e885d7}\label{class_date_a5874432b5f7339205866055201e885d7}} 
@@ -171,12 +171,6 @@ operators for iteration
 
 Operators for working with a file. 
 
-\mbox{\Hypertarget{class_date_acacb699d0fcffd2443c121586b7c22da}\label{class_date_acacb699d0fcffd2443c121586b7c22da}} 
-\index{Date@{Date}!operator$<$=@{operator$<$=}}
-\index{operator$<$=@{operator$<$=}!Date@{Date}}
-\doxysubsubsection{\texorpdfstring{operator$<$=}{operator<=}}
-{\footnotesize\ttfamily bool operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
 \mbox{\Hypertarget{class_date_a27425be265a0cc57e4f731825154ec4d}\label{class_date_a27425be265a0cc57e4f731825154ec4d}} 
 \index{Date@{Date}!operator==@{operator==}}
 \index{operator==@{operator==}!Date@{Date}}
@@ -193,21 +187,9 @@ Operators for working with a file.
 
 Operators for comparing. 
 
-\mbox{\Hypertarget{class_date_aa72d3f6e17c7aab4d16e9e50b5069e1a}\label{class_date_aa72d3f6e17c7aab4d16e9e50b5069e1a}} 
-\index{Date@{Date}!operator$>$=@{operator$>$=}}
-\index{operator$>$=@{operator$>$=}!Date@{Date}}
-\doxysubsubsection{\texorpdfstring{operator$>$=}{operator>=}}
-{\footnotesize\ttfamily bool operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{lhs,  }\item[{const \mbox{\hyperlink{class_date}{Date}} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
-
 \mbox{\Hypertarget{class_date_ad38747168f2005159180860e5509b26e}\label{class_date_ad38747168f2005159180860e5509b26e}} 
 \index{Date@{Date}!operator$>$$>$@{operator$>$$>$}}
 \index{operator$>$$>$@{operator$>$$>$}!Date@{Date}}
 \doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
 {\footnotesize\ttfamily std\+::istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{class_date}{Date}} \&}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
-
-
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_date_8hpp}{Date.\+hpp}}\item 
-/\+Users/dennisdimitrov/\+Desktop/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\+P\+R\+O\+J\+E\+C\+T Hotev v3/\mbox{\hyperlink{_date_8cpp}{Date.\+cpp}}\end{DoxyCompactItemize}

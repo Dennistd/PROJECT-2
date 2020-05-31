@@ -190,7 +190,7 @@ bool Room:: isAvailable(const Date& from,const Date& to)const{ // all the days i
         return false;
     }
     
-     
+    
     return !GetIsTaken() || (GetStart()>=to || GetFinish()<=from);
 }
 
@@ -246,6 +246,20 @@ std::istream& operator>>(std::istream& stream, Room& r){
     int newBeds;
     stream>>newBeds;
     r.SetBeds(newBeds);
+    
+    if(!r.GetIsTaken()){
+        Date newStart;
+        stream>>newStart;
+        r.SetStart(newStart);
+        Date newFinish;
+        stream>>newFinish;
+        r.SetFinish(newFinish);
+        
+        char note[LENGTH];
+        stream>>note;
+        r.SetNote(note);
+        
+    }
     
     return stream;
     

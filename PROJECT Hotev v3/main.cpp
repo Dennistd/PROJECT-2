@@ -12,40 +12,12 @@ using namespace std;
 int main() {
     
     ///Simple example of the system workings
-   
-    char command[COMMAND_MAX_SIZE];
     
+    char command[COMMAND_MAX_SIZE];
+    std::cout<<"Enter a command for your hotel manager: "<<std::endl;
     
     Hotel Trivago;
-    
-    ///Filling the hotel
-  // Date start(2020,1,1);
-  // Date end(2020,3,13);
-//    start.printDate();
-    
-   // Room firstFloor(4,5,start,end,"Needs cleaning");
-  //  Room secondFloor(1,2,start,end,"Expecting room servise");
-
-    
-   // Tuple tu(firstFloor);
-    //Tuple sec(secondFloor);
-    
-   // Trivago.addRoom(tu);
-  //  Trivago.addRoom(secondFloor);
-
-    
-   // Trivago.print();
-
-    
-
-    
-    
-    FileManager f("Output.txt",Trivago);
-    
-    
-   Test HotelTest(Trivago,command);
-   HotelTest.FileCommand();
-    
-    
+    Test HotelTest(Trivago,command);
+    HotelTest.FileCommand();
     
 }

@@ -59,13 +59,12 @@ size_t Hotel:: GetSize()const{
 
 void Hotel::addRoom(const Room& room){
     Tuple tu(room);
-   // addRoom(tu);
-
-
+    
+    
     if(size==capacity){
         Resize();
     }
-
+    
     
     hotel[size]=tu;
     this->size++;
@@ -159,11 +158,11 @@ bool Hotel:: CanBeFuond(int beds,const Room& room,const Date& from,const Date& t
         }
         return true;
     }
-
+    
     bool found=false;
     count++;
     
-    for(int i=0;i<GetSize() && !found && count<=2;i++){ //count<=2
+    for(int i=0;i<GetSize() && !found && count<=2;i++){ 
         if( !hotel[i].GetRoom().isAvailable(from, to)){
             found = found || CanBeFuond(beds, hotel[i].GetRoom(), from, to, count);
         }
@@ -183,11 +182,11 @@ void Hotel:: findVIP(int beds,const Date& from,const Date& to){
     }
 }
 
-    void Hotel::  unavailable(Room room,const Date& from,const Date& to,const char* note){
-        int index=GetIndex(room);
-        at(index).makeUnavailable(from, to, note);
-        
-    }
+void Hotel::  unavailable(Room room,const Date& from,const Date& to,const char* note){
+    int index=GetIndex(room);
+    at(index).makeUnavailable(from, to, note);
+    
+}
 
 std::ostream& operator<<(std::ostream& stream, const Hotel& h){
     size_t size =h.GetSize();
@@ -214,7 +213,7 @@ std::istream& operator>>(std::istream& stream, Hotel& h){
 void Hotel:: print()const{
     std::cout<<"HOTEL INFORMATION:"<<std::endl;
     for(int i=0;i<GetSize();i++){
-       at(i).print();
+        at(i).print();
     }
 }
 

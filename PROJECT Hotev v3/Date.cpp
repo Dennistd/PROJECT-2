@@ -136,13 +136,13 @@ bool operator<=(const Date& lhs,const Date& rhs){
 void Date::printDate()const{
     std::cout<<year<<"/";
     if(this->month<10){
-       std::cout<<0<<month<<"/";
+        std::cout<<0<<month<<"/";
     }
     else{
         std::cout<<month<<"/";
     }
     if(this->day<10){
-         std::cout<<0<<month<<"/";
+        std::cout<<0<<month<<"/";
     }
     else{
         std::cout<<month<<"/";
@@ -172,14 +172,14 @@ bool Date:: isValid()const{
             return false;
         }
     }
-        if(year>2000){
-            if((day==29&&month==2) && !((year-2000)%4==0)){
-                      return false;
+    if(year>2000){
+        if((day==29&&month==2) && !((year-2000)%4==0)){
+            return false;
         }
     }
-        return true;
+    return true;
 }
-    
+
 Date next(const Date& date){
     Date newDate;
     if(!newDate.isValid()){
@@ -198,17 +198,17 @@ Date next(const Date& date){
 }
 Date  previous(const Date& date){
     Date newDate;
-      if(!newDate.isValid()){
-          return newDate;
-      }
-      newDate=Date(date.GetYear(),date.GetMonth(),(date.GetDay()-1));
-      if(newDate.isValid()){
-          return newDate;
-      }
+    if(!newDate.isValid()){
+        return newDate;
+    }
+    newDate=Date(date.GetYear(),date.GetMonth(),(date.GetDay()-1));
+    if(newDate.isValid()){
+        return newDate;
+    }
     newDate=Date(date.GetYear(),(date.GetMonth()-1),31);
-         if(newDate.isValid()){
-             return newDate;
-         }
+    if(newDate.isValid()){
+        return newDate;
+    }
     newDate=Date(date.GetYear(),(date.GetMonth()-1),30);
     if(newDate.isValid()){
         return newDate;
@@ -236,13 +236,13 @@ Date Date:: operator ++(int){ // postfix
     return date;
 }
 Date Date:: operator --(){ // prefix
-  *this=previous(*this);
+    *this=previous(*this);
     return *this;
 }
 Date Date:: operator --(int){  // postfix
     Date date=*this;
-       *this=previous(date);
-       return date;
+    *this=previous(date);
+    return date;
 } 
 
 std::istream& operator>>(std::istream& is,Date& date){

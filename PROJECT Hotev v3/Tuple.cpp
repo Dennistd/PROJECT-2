@@ -13,7 +13,7 @@ Tuple:: Tuple(): room(){
 }
 
 Tuple:: Tuple(const Room& _room): room(_room){
-   this-> freeBeds= _room.GetBeds() - _room.GetGuests();
+    this-> freeBeds= _room.GetBeds() - _room.GetGuests();
 };
 Room Tuple::GetRoom()const{
     return room;

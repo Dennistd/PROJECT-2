@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include "FileManager.hpp"
 
-const int LENGTH=1024;
 const int COMMAND_MAX_SIZE=30;
 
 ///Class whicj collects data from the user  (user interface)
