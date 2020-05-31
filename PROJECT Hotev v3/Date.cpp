@@ -122,7 +122,9 @@ bool operator<(const Date& lhs,const Date& rhs){
     return false;
     
 }
-
+bool operator==(const Date& lhs,const Date& rhs){
+    return lhs.GetYear()==rhs.GetYear() && lhs.GetMonth()==rhs.GetMonth() && lhs.GetDay()==rhs.GetDay();
+}
 bool operator>=(const Date& lhs,const Date& rhs){
     return lhs>rhs || lhs==rhs;
 }
@@ -130,10 +132,8 @@ bool operator>=(const Date& lhs,const Date& rhs){
 bool operator<=(const Date& lhs,const Date& rhs){
     return lhs<rhs || lhs==rhs;
 }
-bool operator==(const Date& lhs,const Date& rhs){
-    return lhs.GetYear()==rhs.GetYear() && lhs.GetMonth()==rhs.GetMonth() && lhs.GetDay()==rhs.GetDay();
-}
-void Date::printDate()const{//fix 0
+
+void Date::printDate()const{
     std::cout<<year<<"/";
     if(this->month<10){
        std::cout<<0<<month<<"/";

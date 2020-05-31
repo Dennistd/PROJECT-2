@@ -32,8 +32,7 @@ void  Test:: SetCommand(const char* command){
 }
 
 void Test:: Command(){
-    
-    //while
+
     
     if(strcmp(command,"checkin")==0){
         
@@ -41,18 +40,22 @@ void Test:: Command(){
         std::cout<<"Enter the room number: "<<std::endl;
         std::cin>>roomNumber;
         
+        std::cout<<"Enter a note: "<<std::endl;
         char note[LENGTH];
         std::cin>>note;
         
-        int fromYear; // check
+        std::cout<<"Enter the starting date"<<std::endl;
+        int fromYear;
         std::cin>>fromYear;
         int fromMonth;
         std::cin>>fromMonth;
         int fromDay;
         std::cin>>fromDay;
+        
         Date from(fromYear,fromMonth,fromDay);
         
-        int toYear; // check
+        std::cout<<"Enter the finish date"<<std::endl;
+        int toYear;
         std::cin>>toYear;
         int toMonth;
         std::cin>>toMonth;
@@ -60,16 +63,19 @@ void Test:: Command(){
         std::cin>>toDay;
         Date to(toYear,toMonth,toDay);
         
+       std::cout<<"Enter the number of guests"<<std::endl;
         int guests;
         std::cin>>guests;
         
         int index=h.GetIndex(roomNumber);
         
-        if(index!=-1)
-            h.at(index).checkin(from, to, note, guests);
+        if(index!=-1){
+             h.at(index).checkin(from, to, note, guests);
+        }
     }
     
    else if(strcmp(command,"availability")==0){
+        std::cout<<"Which date do you want information for?"<<std::endl;
         Date date=dateInit();
         
         h.availability(date);
@@ -77,6 +83,7 @@ void Test:: Command(){
     }
     
    else if(strcmp(command,"chekout")==0){
+        std::cout<<"Enter the room number to be checked out"<<std::endl;
         int roomNumber;
         std::cin>>roomNumber;
         
@@ -133,7 +140,7 @@ void Test:: Command(){
         std::cout<<"Enter a note : "<<std::endl;
         
         std::cin>>note;
-        //FIX
+        
         int index= h.GetIndex(numberRoom);
         Room room=h.at(index).GetRoom();
         
@@ -155,10 +162,6 @@ void Test:: FileCommand(){
     
     while (strcmp(this->command ,"exit")!=0){
         
-//        char command [COMMAND_MAX_SIZE];
-//        
-//        std::cout<<"Enter a command for your Hotel Manager: "<<std::endl;
-//        std::cin>>command;
         
         if(strcmp(command,"open")){
             f.read();
@@ -174,6 +177,7 @@ void Test:: FileCommand(){
                 Command();
                 
                 std::cin >>innerCommand;
+                SetCommand(innerCommand);
             }
         }
         

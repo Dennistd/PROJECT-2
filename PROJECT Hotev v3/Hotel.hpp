@@ -34,6 +34,7 @@ public:
     int GetIndex(const Room& room ); //finds the index by a given date
     int GetIndex(int roomNumber); //finds the index by a given room number
     Tuple at(int index)const; //The pair on a given position
+    Tuple& at(int index);
     size_t GetSize()const;
     
     ///adds another pait with its room to the hotel
@@ -51,6 +52,8 @@ public:
     
     bool find(int beds,const Date& from,const Date& to);
     void findVIP(int beds,const Date& from,const Date& to);
+    
+    bool CanBeFuond(int beds,const Room& room,const Date& from,const Date& to,int& count);
     
     void unavailable(Room room,const Date& from,const Date& to,const char* note);
     

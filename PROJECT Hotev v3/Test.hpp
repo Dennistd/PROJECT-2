@@ -21,7 +21,7 @@ const int COMMAND_MAX_SIZE=30;
 /// Takes care of the commands
 class Test{
     char* command; //user provided command
-    int len;
+    size_t len;
     Hotel h; //object of type hotel
     
 public:

@@ -118,7 +118,7 @@
 		16512B032471ADAA00BB1505 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Dennis Dimitrov";
 				TargetAttributes = {
 					16512B0A2471ADAA00BB1505 = {
@@ -274,6 +274,7 @@
 		16512B132471ADAA00BB1505 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -282,6 +283,7 @@
 		16512B142471ADAA00BB1505 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

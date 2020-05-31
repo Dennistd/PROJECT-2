@@ -14,7 +14,7 @@
 
 ///Class tuple
 ///
-/// pair of a room and its free beds <Room ; count of beds>
+/// pair of a room and its free beds <Room ; count of free beds>
 class Tuple{
     
     int freeBeds;
@@ -25,6 +25,7 @@ public:
     Tuple(const Room& room);
     
     Room GetRoom()const;
+    Room& GetRoom();
     int GetFreeBeds()const;
     
     //reserves the room in this pair

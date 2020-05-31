@@ -17,7 +17,7 @@
 ///It represents the link to the file and the data without having interest in its format
 class FileManager{
     char* fileName; //the name of the file and its path
-    int len;
+    size_t len;
     
     Hotel hotel; //Object of type hotel which would be modified or derived data from
     

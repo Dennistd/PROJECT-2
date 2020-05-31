@@ -84,7 +84,7 @@ public:
     int countDays(const Date& date);
     bool IsUsed(const Date& from,const Date& to)const;
     
-    void print()const; //orints in a stylised format
+    void print()const; //prints in a stylised format
     
     /// the room is set to be unavailable for a given period and the reason why
     void makeUnavailable(const Date& from,const Date& to, const char* note);

@@ -14,7 +14,7 @@
 
 /// Class for the date
 ///
-/// HAs the form of yyyy/mm/dd
+/// Has the form of yyyy/mm/dd
 class Date{
     int year;
     int month;
@@ -44,9 +44,7 @@ public:
     
     ///Operators for comparing
     friend bool operator>(const Date& lhs,const Date& rhs);
-    friend bool operator>=(const Date& lhs,const Date& rhs);
     friend bool operator<(const Date& lhs,const Date& rhs);
-    friend bool operator<=(const Date& lhs,const Date& rhs);
     friend bool operator==(const Date& lhs,const Date& rhs);
     ///Operators for working with a file
     friend std::ostream& operator<<(std::ostream& os,const Date& date);
@@ -58,5 +56,6 @@ public:
     Date operator --();
     Date operator --(int); 
 };
-
+bool operator>=(const Date& lhs,const Date& rhs);
+bool operator<=(const Date& lhs,const Date& rhs);
 #endif /* Date_hpp */

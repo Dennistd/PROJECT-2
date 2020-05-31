@@ -18,13 +18,16 @@ Tuple:: Tuple(const Room& _room): room(_room){
 Room Tuple::GetRoom()const{
     return room;
 }
+Room& Tuple::GetRoom(){
+    return room;
+}
 int Tuple:: GetFreeBeds()const{
     return freeBeds;
 }
 
 void Tuple:: print()const{
     room.print();
-    std::cout<<"has "<<freeBeds<<" free beds"<<std::endl;
+    std::cout<<"and has "<<freeBeds<<" free beds"<<std::endl;
 }
 
 void Tuple::makeEmpty(){

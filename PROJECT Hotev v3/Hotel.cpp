@@ -98,6 +98,9 @@ int Hotel:: GetIndex(int roomNumber){
 Tuple Hotel:: at(int index)const{
     return hotel[index];
 }
+Tuple& Hotel:: at(int index){
+    return hotel[index];
+}
 
 void Hotel:: availability(const Date& date)const{
     for(int i=0;i<size;i++){
@@ -131,8 +134,6 @@ void Hotel:: report(const Date& from,const Date& to){
             std::cout<<"Has been taken for "<<hotel[i].GetRoom().countDays(from)<<" days"<<std::endl;
         }
     }
-    //TODO
- 
 }
 
 bool Hotel:: find(int beds,const Date& from,const Date& to){
@@ -151,27 +152,37 @@ bool Hotel:: find(int beds,const Date& from,const Date& to){
     return false;
 }
 
+bool Hotel:: CanBeFuond(int beds,const Room& room,const Date& from,const Date& to,int& count){
+    if(room.canBeChanged(beds, from, to)){
+        if(count<=2){
+            room.print();
+        }
+        return true;
+    }
+
+    bool found=false;
+    count++;
+    
+    for(int i=0;i<GetSize() && !found && count<=2;i++){ //count<=2
+        if( !hotel[i].GetRoom().isAvailable(from, to)){
+            found = found || CanBeFuond(beds, hotel[i].GetRoom(), from, to, count);
+        }
+    }
+    return found;
+}
+
 void Hotel:: findVIP(int beds,const Date& from,const Date& to){
     
-    //TODO FIX
-    find(beds,from,to);
-    if(!find(beds,from,to)){
-        for(int i=0;i<GetSize();i++){
-            if(hotel[i].GetRoom().canBeChanged(beds) && hotel[i].GetRoom().isAvailable(from, to)){
-                hotel[i].print();
-                std::cout<<"Found room with one change"<<std::endl;
-            }
-            
-            for(int j=0;j<GetSize();j++){
-                int newBeds=hotel[i].GetRoom().GetBeds();
-                if(hotel[j].GetRoom().canBeChanged(newBeds)){
-                    hotel[j].print();
-                    std::cout<<"Found room with two changes"<<std::endl;
-                }
+    int count=0;
+    for(int i=0;i<GetSize();i++){
+        if(!hotel[i].GetRoom().GetIsTaken()){
+            if(CanBeFuond(beds, hotel[i].GetRoom(), from, to, count) && count<=2){
+                std::cout<<"Found a room! "<<std::endl;
             }
         }
     }
 }
+
     void Hotel::  unavailable(Room room,const Date& from,const Date& to,const char* note){
         int index=GetIndex(room);
         at(index).makeUnavailable(from, to, note);
@@ -179,7 +190,7 @@ void Hotel:: findVIP(int beds,const Date& from,const Date& to){
     }
 
 std::ostream& operator<<(std::ostream& stream, const Hotel& h){
-    int size=h.GetSize();
+    size_t size =h.GetSize();
     for(int i=0;i<size;i++){
         stream<< h.at(i).GetRoom()<<std::endl;
     }

@@ -21,7 +21,7 @@ void FileManager:: SetFileName(const char* fileName){
 
 void FileManager:: write(){
     std::ofstream file(fileName);
-    file<<this->hotel;
+    file << this->hotel;
     
 }
 void FileManager:: read(){

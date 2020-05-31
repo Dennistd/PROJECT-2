@@ -75,7 +75,7 @@ Room::Room(int number, int beds):start(),finish(){
     
     SetNote("None");
 }
-Room:: Room(int number,int beds,int guests,const Date& start,const Date& end,const char* note):start(start),finish(end){
+Room:: Room(int number,int beds,int guests,const Date& _start,const Date& end,const char* note):start(_start),finish(end){
     
     SetBeds(beds);
     SetNumber(number);
@@ -86,7 +86,7 @@ Room:: Room(int number,int beds,int guests,const Date& start,const Date& end,con
     
     SetNote(note);
 }
-Room:: Room(int number,int beds,const Date& start,const Date& end,const char* note):start(start),finish(end){
+Room:: Room(int number,int beds,const Date& _start,const Date& end,const char* note):start(_start),finish(end){
     SetBeds(beds);
     SetNumber(number);
     
@@ -97,7 +97,7 @@ Room:: Room(int number,int beds,const Date& start,const Date& end,const char* no
     
     SetNote(note);
 }
-Room:: Room(const Room& other):start(other.start),finish(other.finish){ //fix{
+Room:: Room(const Room& other):start(other.start),finish(other.finish){
     CopyFrom(other);
 }
 Room& Room::operator=(const Room& other){
@@ -143,7 +143,7 @@ void Room:: SetGuests(int guests){
         this->guests=guests;
     }
     else{
-        throw "The room can not accepts this many guests";
+        throw "This room can not accepts this many guests";
     }
 }
 
@@ -154,6 +154,7 @@ void Room:: checkin(const Date& from,const Date& to,const char* note){
     SetStart(from);
     SetFinish(to);
     SetNote(note);
+    SetGuests(beds);
 }
 void Room:: checkin(const Date& from,const Date& to,const char* note,int guests){
     IsTaken=true;
@@ -178,8 +179,11 @@ bool Room:: IsTakenOn(const Date& date)const{
 }
 
 void Room:: print()const{
-    std::cout<<"Room|"<<number<<"| "<<"with " <<beds<<" beds"<<std::endl;
-} //to be continued
+    std::cout<<"Room|"<<number<<"| with " <<beds<<" beds"<<std::endl;
+    if(GetIsTaken()){
+        std::cout<<"Is taken from "<<GetStart()<<" to "<<GetFinish()<<" with "<<GetNote()<<std::endl;
+    }
+}
 
 bool Room:: isAvailable(const Date& from,const Date& to)const{ // all the days in this period are continius and ordered
     if(from>to){
@@ -191,11 +195,10 @@ bool Room:: isAvailable(const Date& from,const Date& to)const{ // all the days i
 }
 
 
-
 void Room:: makeUnavailable(const Date& from,const Date& to, const char* note){
     IsTaken=true;
-    this-> start=from;
-    this->finish=to;
+    this->start=from;
+    this-> finish=to;
     
     SetNote(note);
 }
